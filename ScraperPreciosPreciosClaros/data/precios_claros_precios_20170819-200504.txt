@@ -1,0 +1,45 @@
+7790360026576|Market|Calle 7 767|La Plata|75.00||||
+7790360026576|Vea|Calle 47 Noreste 0|LA PLATA|71.40||||
+7790360026576|Vea|45 377|LA PLATA|71.40||||
+7790360026576|COTO CICSA|Calle 43 782|La Plata|72.49|||61.62|LLEVANDO ESTE ARTICULO, 15% DE DTO CON TARJETAS  EN LINEA DE CAJAS*  - VIGENCIA: DESDE 18/08/2017 HASTA 20/08/2017 O HASTA AGOTAR STOCK DE 10100 UNI
+7790360026576|Disco|Diagonal 962|LA PLATA|72.50|50.75|Promocion: 2do al 60%. Vigencia: Desde el 18/08/2017 hasta el 20/08/2017 o hasta agotar stock.||
+7790360026576|Market|Calle 12 1200|La Plata|75.00||||
+7790360026576|Supermercados DIA|Av 122 0|Ensenada|70.29|||49.99|Presentando la tarjeta CLUB DIA.
+7790360026576|Vea|Calle 19 143|LA PLATA|71.40||||
+7790360026576|Vea|Calle 13 Bis 1936|LA PLATA|71.40||||
+7790360026576|Disco|Calle 30 Y Calle 47 777|LA PLATA|72.50|50.75|Promocion: 2do al 60%. Vigencia: Desde el 18/08/2017 hasta el 20/08/2017 o hasta agotar stock.||
+7790360026576|Vea|Calle 525 1316|LA PLATA|71.40||||
+7790360026576|Hipermercado Carrefour|Camino Gral. Belgrano None|La Plata|68.51||||
+7790360026576|Walmart SuperCenter|Camino Centenario 1876|LA PLATA NOROESTE DE LA CALLE 50|73.90|51.73|30% de descuento llevando 1, promoción válida hasta el 2017-08-21 o hasta agotar stock, o lo que ocurra primero.||
+7790360026576|Supermercados DIA|Cl Bossigna 783|Ensenada|70.29|49.20|30% DTO HAMBURGUESA - Vigencia: Desde el 17/08/2017 hasta el 19/08/2017 - Stock: Hasta agotar las  22 unidades.|34.99|30% DTO HAMBURGUESA - Vigencia: Desde el 17/08/2017 hasta el 19/08/2017 - Stock: Hasta agotar las  22 unidades. Con tarjeta Club DIA.
+7790360026576|Supermercados DIA|Cl La Merced 220|Ensenada|70.29|||49.99|Presentando la tarjeta CLUB DIA.
+7790360026576|Supermercados DIA|Cl Montevideo 1020|Berisso|70.29|||49.99|Presentando la tarjeta CLUB DIA.
+7790360026576|Supermercados DIA|Cl Montevideo 2181|Berisso|70.29|||49.99|Presentando la tarjeta CLUB DIA.
+7790360026576|Disco|Belgrano Entre Calle 15 Y Pellegrini 0|CITY BELL|72.50|50.75|Promocion: 2do al 60%. Vigencia: Desde el 18/08/2017 hasta el 20/08/2017 o hasta agotar stock.||
+7790360026576|Express|Avenida Arana 231|Villa Elisa|73.00|||62.05|15%  Descuento con Clarin 365 Plus
+7790360026576|Supermercados DIA|Cl Heroes De Malvina 2839|Berazategui|70.29|49.20|30% DTO HAMBURGUESA - Vigencia: Desde el 17/08/2017 hasta el 19/08/2017 - Stock: Hasta agotar las  22 unidades.|34.99|30% DTO HAMBURGUESA - Vigencia: Desde el 17/08/2017 hasta el 19/08/2017 - Stock: Hasta agotar las  22 unidades. Con tarjeta Club DIA.
+7790360026606|Market|Calle 7 767|La Plata|38.50||||
+7790360026606|Vea|Calle 47 Noreste 0|LA PLATA|36.79||||
+7790360026606|Vea|45 377|LA PLATA|36.79||||
+7790360026606|COTO CICSA|Calle 43 782|La Plata|36.99|||31.44|LLEVANDO ESTE ARTICULO, 15% DE DTO CON TARJETAS  EN LINEA DE CAJAS*  - VIGENCIA: DESDE 18/08/2017 HASTA 20/08/2017 O HASTA AGOTAR STOCK DE 2600 UNI
+7790360026606|Disco|Diagonal 962|LA PLATA|36.79|25.75|Promocion: 2do al 60%. Vigencia: Desde el 18/08/2017 hasta el 20/08/2017 o hasta agotar stock.||
+7790360026606|Market|Calle 12 1200|La Plata|38.50||||
+7790360026606|Supermercados DIA|Av 122 0|Ensenada|32.99||||
+7790360026606|Vea|Calle 19 143|LA PLATA|36.79||||
+7790360026606|Vea|Calle 13 Bis 1936|LA PLATA|36.79||||
+7790360026606|Disco|Calle 30 Y Calle 47 777|LA PLATA|36.79|25.75|Promocion: 2do al 60%. Vigencia: Desde el 18/08/2017 hasta el 20/08/2017 o hasta agotar stock.||
+7790360026606|Vea|Calle 525 1316|LA PLATA|36.79||||
+7790360026606|Hipermercado Carrefour|Camino Gral. Belgrano None|La Plata|39.90||||
+7790360026606|Walmart SuperCenter|Camino Centenario 1876|LA PLATA NOROESTE DE LA CALLE 50|39.90|27.93|30% de descuento llevando 1, promoción válida hasta el 2017-08-21 o hasta agotar stock, o lo que ocurra primero.||
+7790360026606|Supermercados DIA|Cl Bossigna 783|Ensenada|32.99|23.09|30% DTO HAMBURGUESA - Vigencia: Desde el 17/08/2017 hasta el 19/08/2017 - Stock: Hasta agotar las  25 unidades.||
+7790360026606|Supermercados DIA|Cl La Merced 220|Ensenada|33.99||||
+7790360026606|Supermercados DIA|Cl Montevideo 1020|Berisso|33.99||||
+7790360026606|Supermercados DIA|Cl Montevideo 2181|Berisso|33.99||||
+7790360026606|Disco|Belgrano Entre Calle 15 Y Pellegrini 0|CITY BELL|36.79|25.75|Promocion: 2do al 60%. Vigencia: Desde el 18/08/2017 hasta el 20/08/2017 o hasta agotar stock.||
+7790360026606|Express|Avenida Arana 231|Villa Elisa|42.00|||35.70|15%  Descuento con Clarin 365 Plus
+7790360026606|Supermercados DIA|Cl Heroes De Malvina 2839|Berazategui|32.99|23.09|30% DTO HAMBURGUESA - Vigencia: Desde el 17/08/2017 hasta el 19/08/2017 - Stock: Hasta agotar las  25 unidades.||
+7790670050728|Market|Calle 7 767|La Plata|27.00||||
+7790670050728|Vea|Calle 47 Noreste 0|LA PLATA|27.60||||
+7790670050728|Vea|45 377|LA PLATA|27.60||||
+7790670050728|COTO CICSA|Calle 43 782|La Plata|28.99|||24.64|LLEVANDO ESTE ARTICULO, 15% DE DTO CON TARJETAS  EN LINEA DE CAJAS*  - VIGENCIA: DESDE 18/08/2017 HASTA 20/08/2017 O HASTA AGOTAR STOCK DE 8300 UNI
+7790670050728|Disco|Diagonal 962|LA PLATA|29.00||||

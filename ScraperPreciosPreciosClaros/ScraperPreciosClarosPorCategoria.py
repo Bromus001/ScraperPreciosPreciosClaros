@@ -23,6 +23,7 @@ print ('Current folder is {}'.format(mRootFolder))
 mContinue = 1
 mErrCount = 0
 mAlreadyProcessed = dict()
+mPage = 1
 
 driver = webdriver.Chrome(executable_path='C:\Bromus\Software\chromedriver.exe')
 driver.get("https://www.preciosclaros.gob.ar/#!/buscar-productos")
@@ -42,46 +43,35 @@ while (mContinue == 1):
             EC.visibility_of_element_located((By.XPATH  , "//input[contains(@class, 'showSuggester')] "))
         )
 
-        mProducts = []
+        sleep(10)
 
-        mPendingProductsFile = os.path.join(mRootFolder, 'data/pending_products.txt')
-        with open(mPendingProductsFile) as f:
+        mPendingCategories = os.path.join(mRootFolder, 'data/pending_categories.txt')
+        with open(mPendingCategories) as f:
             for mLine in f:
-                mProduct = [elt.strip() for elt in mLine.split('|')]
-                mProducts.append(mProduct)
+                mCategoryId = mLine
 
-        mTotalProducts = len(mProducts)
+        print ("procesando categoria {}".format(mCategoryId))        
 
-        print ("{} productos pendientes".format(mTotalProducts))        
+        mCategories = driver.find_elements_by_xpath("//div[contains(@class, 'buscador-categorias')]/div")
 
+        mCategory = mCategories[int(mCategoryId)].find_element_by_xpath(".//div[@class='item-categoria']")
+
+        mCategory.click()
+
+        mFoundProducts = []
+
+        mProducts = []
+        
         mFileName = os.path.join(mRootFolder, 'data/' + 'precios_claros_precios_' +  datetime.now().strftime("%Y%m%d-%H%M%S") + '.txt')
 
-        for mProductIndex in range(0, len(mProducts)):
 
-            if (mProducts[mProductIndex][0] in mAlreadyProcessed):
-                print("Producto {} ya procesado".format(mProducts[mProductIndex][1]))
-                continue
-
-            mInput.clear()
-            mInput.send_keys(mProducts[mProductIndex][1])
-            mInput.send_keys(Keys.RETURN)
+        while (mPage > 0):
 
             sleep(5)
 
-            try:
-                WebDriverWait(driver, 10).until(
-                    EC.visibility_of_element_located((By.XPATH  , "//div[contains(@class, 'contenedor-filtro-vista')] "))
-                )
-
-            except TimeoutException:
-                #Asumo No Encontrado, lo descarto y continuo con el resto
-                mFile = open(mPendingProductsFile, 'w')   
-                for mProductIndex2 in range(mProductIndex + 1, len(mProducts)):
-                    mLine = '|'.join((mProducts[mProductIndex2][0], mProducts[mProductIndex2][1])) + "\n"
-                    mFile.write(mLine)
-                mFile.close()
-
-                continue
+            WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.XPATH  , "//div[contains(@class, 'contenedor-filtro-vista')] "))
+            )
 
             mTotalProductsDiv = driver.find_elements_by_xpath("//div[@class= 'caja-producto-mosaico']")
 
@@ -90,7 +80,7 @@ while (mContinue == 1):
             mFoundProducts = []
 
             print ("Encontrados {} productos".format(mTotalFound))
-
+            
             for mIndex in range(0, mTotalFound):
 
                 sleep(2)
@@ -160,25 +150,6 @@ while (mContinue == 1):
                             mFile.write(mLine)
                             mFile.close
 
-
-
-                mFile = open(mPendingProductsFile, 'w')   
-                for mProductIndex2 in range(mProductIndex + 1, len(mProducts)):
-
-                    mFound = 0
-
-                    for mm in range(0, len(mFoundProducts)):
-                        if (mFoundProducts[mm] == mProducts[mProductIndex2][0]):
-                            mFound = 1
-                            break
-
-                    if (mFound == 0):            
-                        mLine = '|'.join((mProducts[mProductIndex2][0], mProducts[mProductIndex2][1])) + "\n"
-                        mFile.write(mLine)
-
-                mFile.close()
-
-
                 mBackButton = WebDriverWait(driver, 10).until(
                     EC.visibility_of_element_located((By.XPATH  , "//div[contains(@class, 'contenedor-back')]"))
                 )
@@ -188,6 +159,13 @@ while (mContinue == 1):
                 WebDriverWait(driver, 10).until(
                     EC.visibility_of_element_located((By.XPATH  , "//div[contains(@class, 'contenedor-filtro-vista')] "))
                 )
+
+
+            if (mTotalFound == 50):
+                mPage = mPage + 1
+                driver.find_element_by_xpath("//ul[contains(@class, 'pagination')]/li[last()]/a").click()
+            else:
+                mPage = -1
 
 
         mContinue = 0
@@ -207,3 +185,4 @@ while (mContinue == 1):
 
 print("Listo")
 driver.close()
+

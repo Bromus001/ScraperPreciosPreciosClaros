@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6b5f308-de6d-47b6-9c0d-766533ce6660</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ScraperPreciosPreciosClaros.py</StartupFile>
+    <StartupFile>ScraperPreciosClarosPorCategoria.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ScraperPreciosClarosPorCategoria.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScraperPreciosClarosPorMarca.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ScraperPreciosPreciosClaros.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HTML\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTML\PaginaInicial.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
