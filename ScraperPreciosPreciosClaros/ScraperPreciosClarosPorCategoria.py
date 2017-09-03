@@ -93,6 +93,7 @@ while (mContinue == 1):
                     continue
 
                 mProductName = mProductDiv.find_element_by_xpath(".//div[contains(@class, 'nombre-producto') and contains(@class, 'ng-binding')]").get_attribute("innerText")
+                mProductImageUrl = mProductDiv.find_element_by_xpath(".//div[@class='contenedor-imagen']/img").get_attribute("src")
                 mProductSku = mProductDiv.find_element_by_xpath(".//div[contains(@class, 'ean') and contains(@class, 'ng-binding')]").get_attribute("innerText")
 
                 mFoundProducts.append(mProductSku)
@@ -136,6 +137,8 @@ while (mContinue == 1):
                             #mStoreImage = mStoreRow.find_element_by_xpath(".//div[@class = 'contenedor-imagen']/img").get_attribute("src") 
 
                             mLine = '|'.join((mProductSku
+                                                , mProductName.strip()
+                                                , mProductImageUrl.strip()
                                                 , mStoreName.strip()
                                                 , mStoreAddress.strip()
                                                 , mStoreCity.strip()
