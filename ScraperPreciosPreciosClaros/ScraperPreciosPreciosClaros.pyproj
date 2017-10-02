@@ -4,13 +4,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6b5f308-de6d-47b6-9c0d-766533ce6660</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ScraperPreciosClarosPorCategoria.py</StartupFile>
+    <StartupFile>ScraperPreciosPreciosClaros.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>ScraperPreciosPreciosClaros</Name>
     <RootNamespace>ScraperPreciosPreciosClaros</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>mendoza</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>

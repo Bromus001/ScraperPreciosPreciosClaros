@@ -24,9 +24,17 @@ mContinue = 1
 mErrCount = 0
 mAlreadyProcessed = dict()
 
+#cordoba rosario mendoza ushuaia tucuman bariloche salta la_plata
+mLocation = sys.argv[1]
+
+print('Location is {}'.format(mLocation))
+
 driver = webdriver.Chrome(executable_path='C:\Bromus\Software\chromedriver.exe')
 driver.get("https://www.preciosclaros.gob.ar/#!/buscar-productos")
-mLocalizationButton = driver.find_element_by_id("la_plata")
+mLocalizationButton = driver.find_element_by_id(mLocation)
+
+
+
 mLocalizationButton.click()
 
 
@@ -39,12 +47,12 @@ while (mContinue == 1):
     try:
 
         mInput = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH  , "//input[contains(@class, 'showSuggester')] "))
+            EC.visibility_of_element_located((By.XPATH  , "//input[contains(@class, 'do-hide-menu-on-click')] "))
         )
 
         mProducts = []
 
-        mPendingProductsFile = os.path.join(mRootFolder, 'data/pending_products.txt')
+        mPendingProductsFile = os.path.join(mRootFolder, 'data/' + mLocation + '/pending_products.txt')
         with open(mPendingProductsFile) as f:
             for mLine in f:
                 mProduct = [elt.strip() for elt in mLine.split('|')]
@@ -54,11 +62,11 @@ while (mContinue == 1):
 
         print ("{} productos pendientes".format(mTotalProducts))        
 
-        mFileName = os.path.join(mRootFolder, 'data/' + 'precios_claros_precios_' +  datetime.now().strftime("%Y%m%d-%H%M%S") + '.txt')
+        mFileName = os.path.join(mRootFolder, 'data/' + mLocation + '/precios_claros_' + mLocation + '_' +  datetime.now().strftime("%Y%m%d-%H%M%S") + '.txt')
 
         for mProductIndex in range(0, len(mProducts)):
 
-            if (mProducts[mProductIndex][0] in mAlreadyProcessed):
+            if (mProducts[mProductIndex][1] in mAlreadyProcessed):
                 print("Producto {} ya procesado".format(mProducts[mProductIndex][1]))
                 continue
 
@@ -66,7 +74,7 @@ while (mContinue == 1):
             mInput.send_keys(mProducts[mProductIndex][1])
             mInput.send_keys(Keys.RETURN)
 
-            sleep(5)
+            #sleep(5)
 
             try:
                 WebDriverWait(driver, 10).until(
@@ -74,6 +82,7 @@ while (mContinue == 1):
                 )
 
             except TimeoutException:
+                print("Timeout Exception {}".format(mProducts[mProductIndex][1]))
                 #Asumo No Encontrado, lo descarto y continuo con el resto
                 mFile = open(mPendingProductsFile, 'w')   
                 for mProductIndex2 in range(mProductIndex + 1, len(mProducts)):
@@ -139,6 +148,7 @@ while (mContinue == 1):
                             mStoreName = mStoreRow.find_element_by_xpath(".//p[contains(@class, 'nombre')]").get_attribute("innerText")
                             mStoreAddress = mStoreRow.find_element_by_xpath(".//p[contains(@class, 'direccion')]").get_attribute("innerText")
                             mStoreCity = mStoreRow.find_element_by_xpath(".//p[contains(@class, 'ciudad')]").get_attribute("innerText")
+                            mStoreLocation = mLocation
                             #mStoreDistance = mStoreRow.find_element_by_xpath(".//td[contains(@class, 'detalle-distancia')]").get_attribute("innerText")
                             mStoreListPrice = mStoreRow.find_element_by_xpath(".//span[contains(@class, 'precio-lista')]").get_attribute("innerText")
                             mStoreProm1Price = mStoreRow.find_element_by_xpath(".//span[contains(@class, 'precio-promo-1')]/span").get_attribute("innerText")
@@ -153,6 +163,7 @@ while (mContinue == 1):
                                                 , mStoreName.strip()
                                                 , mStoreAddress.strip()
                                                 , mStoreCity.strip()
+                                                , mStoreLocation.strip()
                                                 , str(mStoreListPrice).strip().replace("$","").replace(",",".").replace(" ","")
                                                 , str(mStoreProm1Price).strip().replace("$","").replace(",",".").replace(" ","")
                                                 , mStoreProm1Label.strip()
