@@ -12,7 +12,7 @@
     <Name>ScraperPreciosPreciosClaros</Name>
     <RootNamespace>ScraperPreciosPreciosClaros</RootNamespace>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>mendoza</CommandLineArguments>
+    <CommandLineArguments>la_plata 8</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

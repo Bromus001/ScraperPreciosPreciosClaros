@@ -26,14 +26,24 @@ mAlreadyProcessed = dict()
 
 #cordoba rosario mendoza ushuaia tucuman bariloche salta la_plata
 mLocation = sys.argv[1]
+mCategoryId = "-1"
 
 print('Location is {}'.format(mLocation))
 
-driver = webdriver.Chrome(executable_path='C:\Bromus\Software\chromedriver.exe')
+options = webdriver.ChromeOptions()
+#options.binary_location = '/usr/bin/chromium-browser'
+#All the arguments added for chromium to work on selenium
+options.add_argument("--no-sandbox") #This make Chromium reachable
+options.add_argument("--no-default-browser-check") #Overrides default choices
+options.add_argument("--no-first-run")
+options.add_argument("--disable-default-apps") 
+
+driver = webdriver.Chrome(executable_path='C:\Bromus\Software\chromedriver.exe', chrome_options=options)
 driver.get("https://www.preciosclaros.gob.ar/#!/buscar-productos")
 mLocalizationButton = driver.find_element_by_id(mLocation)
 
 
+sleep(5)
 
 mLocalizationButton.click()
 
@@ -52,7 +62,7 @@ while (mContinue == 1):
 
         mProducts = []
 
-        mPendingProductsFile = os.path.join(mRootFolder, 'data/' + mLocation + '/pending_products.txt')
+        mPendingProductsFile = os.path.join(mRootFolder, 'data/pending_products_' + mLocation + '.txt')
         with open(mPendingProductsFile) as f:
             for mLine in f:
                 mProduct = [elt.strip() for elt in mLine.split('|')]
@@ -62,11 +72,13 @@ while (mContinue == 1):
 
         print ("{} productos pendientes".format(mTotalProducts))        
 
-        mFileName = os.path.join(mRootFolder, 'data/' + mLocation + '/precios_claros_' + mLocation + '_' +  datetime.now().strftime("%Y%m%d-%H%M%S") + '.txt')
+        mFileName = os.path.join(mRootFolder, 'data/precios_claros_' + mLocation + '_' +  datetime.now().strftime("%Y%m%d-%H%M%S") + '.txt')
 
         for mProductIndex in range(0, len(mProducts)):
 
-            if (mProducts[mProductIndex][1] in mAlreadyProcessed):
+            print("ProductIndex is {} of {}".format(mProductIndex, mTotalProducts))
+
+            if (mProducts[mProductIndex][0] in mAlreadyProcessed):
                 print("Producto {} ya procesado".format(mProducts[mProductIndex][1]))
                 continue
 
@@ -77,7 +89,7 @@ while (mContinue == 1):
             #sleep(5)
 
             try:
-                WebDriverWait(driver, 10).until(
+                WebDriverWait(driver, 15).until(
                     EC.visibility_of_element_located((By.XPATH  , "//div[contains(@class, 'contenedor-filtro-vista')] "))
                 )
 
@@ -92,7 +104,8 @@ while (mContinue == 1):
 
                 continue
 
-            mTotalProductsDiv = driver.find_elements_by_xpath("//div[@class= 'caja-producto-mosaico']")
+            
+            mTotalProductsDiv = driver.find_elements_by_xpath("//div[(contains(@class, 'producto'))]/div[contains(@class, 'caja-producto-mosaico')]")
 
             mTotalFound = len(mTotalProductsDiv)
 
@@ -102,31 +115,29 @@ while (mContinue == 1):
 
             for mIndex in range(0, mTotalFound):
 
+                print("Buscando precios producto {} de {}".format(mIndex, mTotalFound))
+
                 sleep(2)
 
-                mProductDiv = driver.find_elements_by_xpath("//div[@class= 'caja-producto-mosaico']")[mIndex]        
+                mProductDiv = mTotalProductsDiv[mIndex]
 
                 mDetailButton = mProductDiv.find_element_by_xpath(".//div[contains(@class, 'nombre-producto')]")
-
-                if (not mDetailButton.is_displayed()):
-                    continue
-
+                
                 mProductName = mProductDiv.find_element_by_xpath(".//div[contains(@class, 'nombre-producto') and contains(@class, 'ng-binding')]").get_attribute("innerText")
                 mProductImageUrl = mProductDiv.find_element_by_xpath(".//div[@class='contenedor-imagen']/img").get_attribute("src")
                 mProductSku = mProductDiv.find_element_by_xpath(".//div[contains(@class, 'ean') and contains(@class, 'ng-binding')]").get_attribute("innerText")
-                
 
                 mFoundProducts.append(mProductSku)
 
                 if (mProductSku in mAlreadyProcessed):
-                    print("Producto {} ya procesado".format(mProductName))
+                    print("Producto {} ya procesado (2)".format(mProductName))
                     continue
                 else:
                     mAlreadyProcessed[mProductSku] = mProductName
 
                 print("Procesando producto " + mProductName.strip())
 
-                mDetailButton.click()
+                driver.execute_script("arguments[0].click();", mDetailButton)
 
                 mOk = 0
 
@@ -136,6 +147,7 @@ while (mContinue == 1):
                     )
 
                 except TimeoutException:
+                    print("Timeout esperando detalle de precios")
                     mOk = -1
 
                 if (mOk == 0):
@@ -168,14 +180,12 @@ while (mContinue == 1):
                                                 , str(mStoreProm1Price).strip().replace("$","").replace(",",".").replace(" ","")
                                                 , mStoreProm1Label.strip()
                                                 , str(mStoreProm2Price).strip().replace("$","").replace(",",".").replace(" ","")
-                                                , mStoreProm2Label.strip()))+ "\n"
-
+                                                , mStoreProm2Label.strip()
+                                                , mCategoryId.strip()))+ "\n"
 
                             mFile = open(mFileName, u'a')   
                             mFile.write(mLine)
                             mFile.close
-
-
 
                 mFile = open(mPendingProductsFile, 'w')   
                 for mProductIndex2 in range(mProductIndex + 1, len(mProducts)):
@@ -194,13 +204,9 @@ while (mContinue == 1):
                 mFile.close()
 
 
-                mBackButton = WebDriverWait(driver, 10).until(
-                    EC.visibility_of_element_located((By.XPATH  , "//div[contains(@class, 'contenedor-back')]"))
-                )
+                driver.execute_script("window.history.go(-1)")
 
-                mBackButton.click()
-
-                WebDriverWait(driver, 10).until(
+                WebDriverWait(driver, 15).until(
                     EC.visibility_of_element_located((By.XPATH  , "//div[contains(@class, 'contenedor-filtro-vista')] "))
                 )
 

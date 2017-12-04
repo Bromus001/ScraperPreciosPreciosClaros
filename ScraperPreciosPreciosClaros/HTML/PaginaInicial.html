@@ -1,25 +1,7 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="es" ng-app="sepaApp">
 <head>
-    <style type="text/css">
-        @charset "UTF-8";
-
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
-            display: none !important;
-        }
-
-        ng\:form {
-            display: block;
-        }
-
-        .ng-animate-shim {
-            visibility: hidden;
-        }
-
-        .ng-anchor {
-            position: absolute;
-        }
-    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,37 +22,31 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#0072b8">
 
     <!-- Meta Facebook -->
-    <meta property="og:url" content="//www.preciosclaros.gob.ar">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Precios Claros">
-    <meta property="og:description" content="Buscá los productos que comprás habitualmente y compará sus precios en los comercios que los hayan publicado.">
-    <meta property="og:image" content="/img/redes.png">
-    <meta property="og:locale" content="es_AR">
+    <meta property="og:url" content="//www.preciosclaros.gob.ar" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Precios Claros" />
+    <meta property="og:description" content="Buscá los productos que comprás habitualmente y compará sus precios en los comercios que los hayan publicado." />
+    <meta property="og:image" content="/img/redes.png" />
+    <meta property="og:locale" content="es_AR" />
 
     <!-- Meta Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Precios Claros">
-    <meta name="twitter:description" content="Buscá los productos que comprás habitualmente y compará sus precios en los comercios que los hayan publicado.">
-    <meta name="twitter:image" content="https://www.preciosclaros.gob.ar/img/redes.png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Precios Claros" />
+    <meta name="twitter:description" content="Buscá los productos que comprás habitualmente y compará sus precios en los comercios que los hayan publicado." />
+    <meta name="twitter:image" content="https://www.preciosclaros.gob.ar/img/redes.png" />
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/application.253952313cbe9960878afe1ce82ad7b9.css">
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/13/intl/es_ALL/common.js" style=""></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/13/intl/es_ALL/util.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/13/intl/es_ALL/stats.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fwww.preciosclaros.gob.ar%2F%23!%2Fbuscar-productos&amp;4sAIzaSyC4LRPCDgzVyOj12TO5kRiaGGs-Tmn0BxY&amp;callback=_xdc_._1cudnv&amp;token=45855"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/css/application.847225eebbb186fc03384882d10fb6ee.css' />
 </head>
 <body ng-controller="SepaController as sepa">
     <!-- Google Tag Manager -->
     <noscript>
-        &lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-MB9K5H"
-        height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MB9K5H"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/r20170727143628/recaptcha__es_419.js"></script>
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-MB9K5H"></script>
     <script>
 (function (w, d, s, l, i) {
         w[l] = w[l] || []; w[l].push({
@@ -115,27 +91,98 @@
         <section class="encabezado">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 text-center">
-                        <a href="/"><img alt="Precios Claros" src="/img/logo.png" class="logo-precios-claros"></a>
-                        <hr class="hidden-print">
+                    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6 col-xs-offset-1 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 text-center contenedor-logo">
+                        <a href="/">
+                            <img alt="Precios Claros" src="/img/logo.png" class="logo-precios-claros">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <article class="container mayorista-lista hidden-print ng-cloak" ng-show="localizado && !falloEnAPI">
+                        <form>
+                            <div class="row buscador-mayorista">
+
+                                <div class="col-md-2">
+                                    <a href="/">
+                                        <img alt="Precios Claros" src="/img/logo.png" class="logo-precios-claros logo-mini">
+                                    </a>
+                                </div>
+                                <div class="col-xs-9 col-sm-8 col-md-8 contenedor-chosen buscador">
+                                    <div class="input-group">
+                                        <input type="text" list="productos" placeholder="Nombre de producto o marca" class="form-control do-hide-menu-on-click"
+                                               ng-model="query" sepa-enter="filtrarPorQuery()" class="form-control">
+                                        <span class="btn btn-primary btn-buscar btn-buscar-productos input-group-btn" ng-click="filtrarPorQuery()">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-12 validacion" ng-show="queryIsTooShort">
+                                        <p>Por favor, utilizá al menos dos letras para realizar una búsqueda</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-2 col-sm-2 col-md-2 contenedor-carrito" ng-class="{disabled: lista.length == 0}">
+                                    <span class="badge btn-danger notificacion ng-cloak">{{ lista.length }}</span>
+                                    <span class="fa-stack lista" id="lista-btn">
+                                        <i class="fa fa-list-alt fa-stack-1x fa-3x text-primary"></i>
+                                        <i class="fa fa-check fa-stack-2x text-primary check"></i>
+                                    </span>
+                                </div>
+                                <div class="desplegable" style="display:none" ng-hide="lista.length == 0">
+                                    <div class="productos-desplegable">
+                                        <div class="row prod-ind" ng-repeat="producto in lista">
+                                            <div class="col-xs-9 col-md-10">
+                                                <div class="contenedor-imagen" ng-click="verDetalleProducto(producto)">
+                                                    <img alt="{{ producto.nombre }}" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png" />
+                                                </div>
+                                                <p class="descripcion" ng-click="verDetalleProducto(producto)">{{producto.nombre}}</p>
+                                            </div>
+                                            <a class="col-xs-2 col-md-2 text-danger md-text-right" ng-click="quitarProducto(producto)">
+                                                <span role="button" class="btn">
+                                                    <i class="fa fa-lg fa-trash"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row footer-desp">
+                                        <div class="col-xs-4 col-md-4 text-danger vaciar">
+                                            <a href="#modalVaciarLista" role="button" class="text-danger btn-vaciar-lista btn btn-link" data-toggle="modal">
+                                                <i class="fa fa-trash fa-lg"></i>
+                                                VACIAR
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-8 col-md-8">
+                                            <span role="button" class="btn btn-success goto-comparativa" ng-click="lista.length > 0 && sucursales.length > 0 && !falloEnAPI && comparar('header')">
+                                                <i class="fa fa-shopping-basket"></i>
+                                                Comparar Precios
+                                                <span class="ng-cloak">({{lista.length}})</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <p class="texto-aclaracion" ng-show="lista.length < 3">
+                                        Si no sabés qué buscar, podés probar con
+                                        <a ng-click="buscarDesdePopulares(bus)" ng-repeat="bus in busquedasPopulares">
+                                            {{bus}}{{$last ? '' : ', '}}
+                                        </a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </article>
+                    <hr class="hidden-print" />
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 text-center descripcion-busqueda">
                         <p class="hidden-print">
                             Buscá los productos que comprás habitualmente y compará sus precios en los comercios que los hayan publicado.
                         </p>
                     </div>
-                </div>
-                <div class="row botonera hidden-print">
-                    <div class="col-xs-6 col-sm-6 col-lg-4 col-xs-offset-0 col-lg-offset-2 text-center btn-buscar-productos bg-color4 active">
-                        <i class="fa fa-search"></i>
-                        <span>
-                            Buscar productos
-                        </span>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-lg-4 text-center btn-comparar-precios bg-color4" ng-click="lista.length &gt; 0 &amp;&amp; sucursales.length &gt; 0 &amp;&amp; !falloEnAPI &amp;&amp; comparar()" ng-class="{'btn-disabled': sucursales.length == 0}">
-                        <i class="fa fa-shopping-basket"></i>
-                        <span>
-                            Comparar precios <span class="ng-cloak">({{lista.length}})</span>
-                        </span>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -143,7 +190,7 @@
 
 
     <main role="main">
-        <div class="container contenedor-spinner text-center" ng-show="spinner &gt; 0">
+        <div class="container contenedor-spinner text-center" ng-show="spinner > 0">
             <h3 class="text-center">Cargando los datos</h3>
             <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
         </div>
@@ -263,104 +310,34 @@
                 </div>
 
 
-                <div class="mayorista tabla1" ng-show="localizado &amp;&amp; !falloEnAPI">
-                    <section class="mayorista-lista">
-                        <article class="container">
-                            <form>
-                                <div class="row buscador-mayorista">
-                                    <label for="productos" class="aclaracion container">
-                                        Buscá un producto escribiendo su nombre y/o marca para ver una tabla con resultados.
-                                    </label>
-                                    <div class="col-xs-9 col-sm-10 col-md-10 contenedor-chosen buscador">
+                <div class="mayorista tabla1" ng-show="localizado && !falloEnAPI">
+                    <section class="sin-resultados" ng-show="pagina.length == 0 && agrupables.length == 0 && !detalleProducto && !(query && sinResultados) && categoriasPrimerNivel.length > 0">
 
-                                        <input type="text" list="productos" placeholder="Nombre de producto o marca" class="form-control do-hide-menu-on-click showSuggester" ng-model="query" sepa-enter="filtrarPorQuery()" uib-typeahead="suggestion for suggestion in getSuggestion($viewValue)" typeahead-on-select="filtrarPorQuery()" typeahead-focus-first="false">
-                                        <!--<input type="text" list="productos" placeholder="Nombre de producto o marca" class="form-control do-hide-menu-on-click showSuggester"
-                                             ng-model="query" sepa-enter="filtrarPorQuery()">-->
-                                        <span class="btn btn-primary buscar" ng-click="filtrarPorQuery()">
-                                            <i class="fa fa-search"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-xs-2 col-sm-2 col-md-2 md-text-right no-padding" ng-class="{disabled: lista.length == 0}">
-                                        <span class="badge btn-danger notificacion ng-cloak">{{ lista.length }}</span>
-                                        <span class="fa-stack lista" id="lista-btn">
-                                            <i class="fa fa-list-alt fa-stack-1x fa-3x text-primary"></i>
-                                            <i class="fa fa-check fa-stack-2x text-primary check"></i>
-                                        </span>
-                                    </div>
-                                    <div class="desplegable" style="display:none" ng-hide="lista.length == 0">
-                                        <div class="productos-desplegable">
-                                            <div class="row prod-ind" ng-repeat="producto in lista">
-                                                <div class="col-xs-9 col-md-10">
-                                                    <div class="contenedor-imagen" ng-click="verDetalleProducto(producto)">
-                                                        <img alt="{{ producto.nombre }}" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png">
-                                                    </div>
-                                                    <p class="descripcion" ng-click="verDetalleProducto(producto)">{{producto.nombre | capitalize}}</p>
-                                                </div>
-                                                <a class="col-xs-2 col-md-2 text-danger md-text-right" ng-click="quitarProducto(producto)">
-                                                    <span role="button" class="btn"><i class="fa fa-lg fa-trash"></i></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="row footer-desp">
-                                            <div class="col-xs-5 col-md-4 text-danger vaciar">
-                                                <a href="#modalVaciarLista" role="button" class="text-danger btn-vaciar-lista" data-toggle="modal">
-                                                    <i class="fa fa-trash fa-lg"></i>  VACIAR
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-7 col-md-8">
-                                                <span role="button" class="btn goto-comparativa btn-success" ng-click="lista.length &gt; 0 &amp;&amp; sucursales.length &gt; 0 &amp;&amp; !falloEnAPI &amp;&amp; comparar()">
-                                                    <i class="fa fa-shopping-basket"></i> Comparar Precios <span class="ng-cloak">({{lista.length}})</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <p class="texto-aclaracion" ng-show="lista.length &lt; 3">
-                                            Si no sabés qué buscar, podés probar con
-                                            <a ng-click="buscarDesdePopulares(bus)" ng-repeat="bus in busquedasPopulares">
-                                                {{bus}}{{$last ? '' : ', '}}
-                                            </a>
-                                        </p>
-                                    </div>
-                                    <div class="col-md-2 text-right contenedor-filtro-vista" ng-show="pagina.length &gt; 0">
-                                        <p class="texto-aclaracion">
-                                            Mostrar como:
-                                        </p>
-                                        <i class="fa fa-2x fa-th-list text-muted filtroVista listado"></i>
-                                        <i class="fa fa-2x fa-th text-muted filtroVista mosaico active"></i>
-                                    </div>
-
-                                </div>
-                            </form>
-                        </article>
-                    </section>
-                    <section class="sin-resultados" ng-show="pagina.length == 0 &amp;&amp; !detalleProducto &amp;&amp; !(query &amp;&amp; sinResultados)">
-
-                        <div class="indicacion text-center">
+                        <!-- <div class="indicacion text-center">
                             <i class="fa fa-arrow-up text-muted"></i>
                         </div>
                         <h5 class="text-center">
-                            Buscá un producto escribiendo su nombre <br>
-                            y/o marca para ver una tabla con resultados o seleccioná una <br>
+                            Buscá un producto escribiendo su nombre <br />
+                            y/o marca para ver una tabla con resultados o seleccioná una <br />
                             de las categorías que se listan a continuación
                         </h5>
 
                         <div class="indicacion text-center">
                             <i class="fa fa-arrow-down text-muted"></i>
                         </div>
-                        <br>
-                        <br>
+                        <br />
+                        <br /> -->
 
+                        <h5 class="titulo-categorias">
+                            También podés buscar por estas categorías
+                        </h5>
+                        <br />
                         <div class="row buscador-categorias">
                             <div ng-repeat="categoria in categoriasPrimerNivel" ng-click="filtrarPorCategoria(categoria)">
                                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                                     <div class="item-categoria">
                                         <p>
-                                            <img src="/img/categorias/{{ categoria.id }}.svg" alt="{{ categoria.nombre }}" fallback-src="img/no-image.png">
+                                            <img src="/img/categorias/{{ categoria.id }}.svg" alt="{{ categoria.nombre }}" fallback-src="img/no-image.png" />
                                         </p>
 
                                         <p class="categoria">
@@ -369,13 +346,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>      
-                        <br>
-                        <br>
-                        <br>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
 
                         <div class="historial">
-                            <div class="col-sm-2 col-xs-12 contenedor-busquedas-recientes" ng-show="recientes.length &gt; 0">
+                            <div class="col-sm-2 col-xs-12 contenedor-busquedas-recientes" ng-show="recientes.length > 0">
                                 <h5>
                                     Búsquedas recientes
                                 </h5>
@@ -383,7 +360,7 @@
                                     {{ reciente }}
                                 </a>
                             </div>
-                            <div class="productos-visitados col-sm-10" ng-show="carrousel.length &gt; 0">
+                            <div class="productos-visitados col-sm-10" ng-show="carrousel.length > 0">
                                 <p class="titulo">
                                     Productos visitados últimamente
                                 </p>
@@ -392,7 +369,7 @@
                                         <div class="col-xs-10 col-sm-10 col-sm-offset-1 col-xs-offset-1">
                                             <div class="item-producto-visitado" ng-click="verDetalleProducto(slide)">
                                                 <p>
-                                                    <img alt="{{ slide.nombre }}" ng-src="{{ slide.id | productoUrl }}" fallback-src="/img/no-image.png">
+                                                    <img alt="{{ slide.nombre }}" ng-src="{{ slide.id | productoUrl }}" fallback-src="/img/no-image.png" />
                                                 </p>
 
                                                 <p class="nombre">
@@ -406,10 +383,23 @@
                         </div>
                     </section>
 
-                    <section class="resultados" ng-show="pagina.length &gt; 0 || detalleProducto || (query &amp;&amp; sinResultados)">
+                    <section class="resultados" ng-show="pagina.length > 0 || agrupables.length > 0 || detalleProducto || (query && sinResultados)">
                         <div class="container">
                             <div class="row">
-                                <article class="col-md-3 filtros">
+                                <div>
+                                    <a href="#contenedorFiltrosBusqueda" class="visible-xs" data-toggle="collapse" aria-expanded="false" aria-controls="contenedorFiltrosBusqueda">
+                                        Mostrar filtros
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <article class="col-md-3 filtros hidden-xs" id="contenedorFiltrosBusqueda">
+                                    <div class="contenedor-filtro-vista" ng-show="pagina.length > 0">
+                                        <p>
+                                            Mostrar como:
+                                        </p>
+                                        <i class="fa fa-2x fa-th-list text-muted filtroVista listado"></i>
+                                        <i class="fa fa-2x fa-th text-muted filtroVista mosaico active"></i>
+                                    </div>
                                     <div class="direccion">
                                         <a href="#modalGmaps" data-toggle="modal">
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -449,6 +439,18 @@
                                                                     <span ng-if="catFiltros[3] != null" class="catSeleccionada">{{ catFiltros[3].nombre | capitalize }}</span>
                                                                     <a ng-show="catFiltros[4] == null" ng-click="removerCategoria();"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                                                                 </nobr>
+
+
+                                                                <dl ng-if="catFiltros[4] != null">
+                                                                    <dd>
+                                                                        <nobr>
+                                                                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                                            <span ng-if="catFiltros[4] != null" class="catSeleccionada">{{ catFiltros[4].nombre | capitalize }}</span>
+                                                                            <a ng-show="catFiltros[5] == null" ng-click="removerCategoria();"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                                                        </nobr>
+                                                                    </dd>
+                                                                </dl>
+
                                                             </dd>
                                                         </dl>
                                                     </dd>
@@ -470,7 +472,12 @@
                                             <dd>
                                                 <div class="form-group">
                                                     <label for="tiposDeComercio">Tipos de comercio ({{ tiposSucursal.length }})</label>
-                                                    <select class="form-control" id="tiposDeComercio" ng-model="filtroTipoComercio" ng-options="o for o in tiposSucursal" ng-change="refrescarSucursales('tipo')" ng-init="filtroTipoComercio = null" allow-single-deselect="true">
+                                                    <select class="form-control" id="tiposDeComercio"
+                                                            ng-model="filtroTipoComercio"
+                                                            ng-options="o for o in tiposSucursal"
+                                                            ng-change="refrescarSucursales('tipo')"
+                                                            ng-init="filtroTipoComercio = null"
+                                                            allow-single-deselect="true">
                                                         <option value="">Todos</option>
                                                     </select>
                                                 </div>
@@ -478,7 +485,12 @@
                                             <dd>
                                                 <div class="form-group">
                                                     <label for="comercios">Comercios ({{ banderasComercio.length }})</label>
-                                                    <select class="form-control" id="comercios" ng-model="filtroBanderaComercio" ng-options="o for o in banderasComercio" ng-change="refrescarSucursales('bandera')" ng-init="filtroBanderaComercio = null" allow-single-deselect="true">
+                                                    <select class="form-control" id="comercios"
+                                                            ng-model="filtroBanderaComercio"
+                                                            ng-options="o for o in banderasComercio"
+                                                            ng-change="refrescarSucursales('bandera')"
+                                                            ng-init="filtroBanderaComercio = null"
+                                                            allow-single-deselect="true">
                                                         <option value="">Todos</option>
                                                     </select>
                                                 </div>
@@ -486,7 +498,13 @@
                                             <dd>
                                                 <div class="form-group">
                                                     <label for="puntosDeVenta">Puntos de venta ({{ sucursales.length }})</label>
-                                                    <select class="form-control" id="puntosDeVenta" no-results-text="'Oops, no hay resultados para '" tabindex="1" ng-model="sucursalFiltro" ng-options="s as (s | sucursalEnBuscarProducto) for s in sucursales" ng-change="cambiarPagina(1, 'sucursal')" ng-init="sucursalFiltro = null" allow-single-deselect="true">
+                                                    <select class="form-control" id="puntosDeVenta"
+                                                            no-results-text="'Oops, no hay resultados para '"
+                                                            tabindex="1" ng-model="sucursalFiltro"
+                                                            ng-options="s as (s | sucursalEnBuscarProducto) for s in sucursales"
+                                                            ng-change="cambiarPagina(1, 'sucursal')"
+                                                            ng-init="sucursalFiltro = null"
+                                                            allow-single-deselect="true">
                                                         <option value="">Todos</option>
                                                     </select>
                                                 </div>
@@ -510,7 +528,7 @@
                                             </dl>
                                         </div>
                                     -->
-                                    <button type="button" class="btn btn-success goto-comparativa" ng-click="lista.length &gt; 0 &amp;&amp; sucursales.length &gt; 0 &amp;&amp; !falloEnAPI &amp;&amp; comparar()">
+                                    <button type="button" class="btn btn-success goto-comparativa" ng-click="lista.length > 0 && sucursales.length > 0 && !falloEnAPI && comparar('sidebar')">
                                         <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                         Comparar precios <span class="ng-cloak">({{ lista.length }})</span>
                                     </button>
@@ -518,22 +536,28 @@
 
                                 <article class="col-md-9 col-xs-12 productos vistaMosaico">
 
-                                    <div ng-show="query &amp;&amp; sinResultados">
+                                    <div class="alert alert-info" ng-show="queryOriginal != queryCambiada && !sinResultados">
+                                        <p>
+                                            No se encuentran resultados para <strong>{{ queryOriginal }}</strong>. Se buscó <strong> {{ queryCambiada }} </strong> en su lugar.
+                                        </p>
+                                    </div>
+                                    <div ng-show="query && sinResultados">
                                         <div class="alert alert-info">
                                             No se encontraron resultados para tu búsqueda <b>{{ query }}</b><span ng-show="categoriaSeleccionada"> en <b>{{ categoriaSeleccionada.nombre | capitalize }}</b></span>.
                                             <ul>
-                                                <li><a href="" ng-click="filtrarPorQuery(true)">Prueba buscando <b>{{ query }}</b> en todo el sitio</a></li>
+                                                <li ng-show="categoriaSeleccionada"><a href="" ng-click="filtrarPorQuery(true)">Prueba buscando <b>{{ query }}</b> en todo el sitio</a></li>
                                                 <li>Prueba buscar términos mas generales</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div ng-hide="query &amp;&amp; sinResultados">
-                                        <div class="col-md-12 col-xs-12 titulosLista" ng-show="pagina.length &gt; 0 || detalleProducto">
+                                    <div ng-hide="query && sinResultados">
+
+                                        <div class="col-md-12 col-xs-12 titulosLista" ng-show="pagina.length > 0 || detalleProducto">
                                             <span class="col-md-6 col-xs-6">
                                                 Productos
                                             </span>
-                                            <span class="col-md-2 col-xs-2">
-                                                Precios
+                                            <span class="titulo-precio col-md-2 col-xs-2">
+                                                Precios&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             </span>
                                             <span class="col-md-2 col-xs-2">
                                                 Disponible en
@@ -542,14 +566,18 @@
                                                 Mi lista
                                             </span>
                                         </div>
+
+
+
                                         <!-- Productos agrupables -->
                                         <div class="col-md-4 col-xs-12 producto no-agrupable" ng-repeat="categoria in agrupables" ng-show="mostrarAgrupables">
                                             <div class="caja-producto-mosaico">
-                                                <div class="contenedor-imagen" ng-click="verDetalleAgrupable(categoria.datosCategoria)">
-                                                    <img alt="{{ categoria.datosCategoria.nombre }}" ng-src="{{ categoria.datosCategoria.id | categoriaUrl }}" class="img-rounded" fallback-src="/img/no-image.png">
+                                                <div class="contenedor-imagen" ng-click="verDetalleAgrupable(categoria)">
+                                                    <img alt="{{ categoria.datosCategoria.nombre }}" ng-src="{{ categoria.id | categoriaUrl }}" class="img-rounded" fallback-src="/img/no-image.png" />
                                                 </div>
                                                 <div class="contenedorProductoEan ver-detalle-mayorista">
-                                                    <div class="nombre-producto agrupable-call" ng-click="verDetalleAgrupable(categoria.datosCategoria)">
+                                                    <div class="nombre-producto agrupable-call" ng-click="verDetalleAgrupable(categoria)">
+                                                        {{ categoria.datosCategoria.padres[categoria.datosCategoria.padres.length - 1] }} -
                                                         {{ categoria.datosCategoria.nombre }}
                                                     </div>
                                                     <div class="ean">
@@ -563,21 +591,25 @@
                                                     <small>
                                                         {{ categoria.cantSucursalesDisponible }} comercios
                                                     </small>
-                                                    <a class="ver" id="ver-detalles-agrupable" ng-click="verDetalleAgrupable(categoria.datosCategoria)" data-toggle="tooltip" data-placement="top" title="Aquí podrá encontrar productos de venta al peso y marcas propias de los comercios." tooltip="">
+                                                    <a class="ver" id="ver-detalles-agrupable" ng-click="verDetalleAgrupable(categoria)" data-toggle="tooltip" data-placement="top" title="Aquí podrá encontrar productos de venta al peso y marcas propias de los comercios." tooltip>
                                                         <img src="img/iconos/ver.png" alt="">
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- Fin agrupables -->
-                                        <div class="col-md-4 col-xs-12 producto" ng-repeat="producto in pagina | orderBy:sort.campo:sort.descendente" search-directive="" suggester-directive="">
+
+
+                                        <div class="col-md-4 col-xs-12 producto" ng-repeat="producto in pagina | orderBy:sort.campo:sort.descendente">
+
                                             <div class="caja-producto-mosaico">
+
                                                 <div class="contenedor-imagen" ng-click="verDetalleProducto(producto)">
-                                                    <img alt="{{ producto.nombre }}" class="img-rounded" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png">
+                                                    <img alt="{{ producto.nombre }}" class="img-rounded" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png" />
                                                 </div>
                                                 <div class="contenedorProductoEan ver-detalle-mayorista">
                                                     <div class="nombre-producto" ng-click="verDetalleProducto(producto)">
-                                                        {{ producto.nombre | capitalize}}
+                                                        {{ producto.nombre}}
                                                     </div>
                                                     <div class="ean">
                                                         {{ producto.id | ean }}
@@ -599,20 +631,43 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    
+                                    
                                     </div>
+
+                                    <div class="row contenedor-ir-comparativa" ng-hide="lista.length == 0">
+                                        <div class="col-xs-6 col-md-6">
+                                            <h3>
+                                                {{ lista.length }}
+                                            </h3>
+                                            <p>
+                                                {{ lista.length == 1? 'producto agregado' : 'productos agregados' }}
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-6 col-md-6">
+                                            <button type="button" class="btn btn-success goto-comparativa" ng-click="lista.length > 0 &amp;&amp; sucursales.length > 0 &amp;&amp; !falloEnAPI &amp;&amp; comparar('footer')">
+                                                Ir a comparar precios
+                                            </button>
+                                        </div>
+                                    </div>
+
                                 </article>
-                                <article class="col-md-9 col-xs-12 detalle-producto mayoristas" style="display:none;">
+                                <div class="col-md-9 col-xs-12 alert alert-info" ng-show="detalleProducto.msg">
+                                    <p>No se pudo encontrar un producto con el código <strong>{{ query }}</strong></p>
+                                </div>
+                                <article class="col-md-9 col-xs-12 detalle-producto mayoristas" id="detalle-producto-minorista" ng-hide="detalleProducto.msg"
+                                         style="display:none;">
                                     <form>
                                         <div class="row encabezado">
                                             <div class="col-xs-12 col-md-8">
                                                 <div class="col-xs-3 col-md-3 text-center no-padding imagen-producto">
                                                     <div class="contenedor-imagen">
-                                                        <img alt="{{ detalleProducto.nombre }}" class="img-rounded" ng-src="{{ detalleProducto.id | productoUrl }}" fallback-src="/img/no-image.png">
+                                                        <img alt="{{ detalleProducto.nombre }}" class="img-rounded" ng-src="{{ detalleProducto.id | productoUrl }}" fallback-src="/img/no-image.png" />
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-8 col-md-7 descripcion">
                                                     <span>
-                                                        {{ detalleProducto.nombre | capitalize}}
+                                                        {{ detalleProducto.nombre}}
                                                         <small class="text-muted">
                                                             <br> {{ detalleProducto.id | ean }}
                                                         </small>
@@ -625,6 +680,7 @@
                                                         <i class="fa fa-close"></i>
                                                         &nbsp;QUITAR
                                                     </a>
+                                                    <span class="do-config-tooltip" ng-click="copiar()" data-toggle="tooltip" style="float: right; cursor: pointer; color: #0072BC" target="_blank"><i class="fa fa-share-alt"></i></span>
                                                 </div>
                                                 <div class="col-xs-1 col-md-2 contenedor-back" onclick="history.go(-1);">
                                                     <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -644,7 +700,7 @@
                                                         Distancia &nbsp;
                                                         <i class="fa" ng-class="{ 'fa-sort': ordenamientoDetalle != '-distancia','fa-sort-down': ordenamientoDetalle == '-distancia', 'fa-sort-up': ordenamientoDetalle == '+distancia' }"></i>
                                                     </th>
-                                                    <th class="col-xs-2 col-md-2 clickable" ng-click="cambiarOrdenamientoEnDetalle('preciosProducto.precio_unitario_sin_iva')">
+                                                    <th class="col-xs-2 col-md-2 clickable" ng-click="cambiarOrdenamientoEnDetalle('preciosProducto.precioLista')">
                                                         Precio de lista
                                                         <i class="fa" ng-class="{ 'fa-sort': ordenamientoDetalle != '-preciosProducto.precioLista','fa-sort-down': ordenamientoDetalle == '-preciosProducto.precioLista', 'fa-sort-up': ordenamientoDetalle == '+preciosProducto.precioLista' }"></i>
                                                     </th>
@@ -683,21 +739,22 @@
                                                     <td class="col-xs-2 col-md-2 detalle-distancia">
                                                         {{ sucursal.distanciaDescripcion }}
                                                     </td>
-                                                    <td class="col-xs-2 col-md-2 detalle-precio" ng-class="{'bg-color-2': sucursal.masBarata}">
+                                                    <td class="col-xs-2 col-md-2 detalle-precio"
+                                                        ng-class="{'bg-color-2': sucursal.masBarata}">
                                                         <span class="precio-lista">
                                                             {{ sucursal.preciosProducto.precioLista | currency2 }}
                                                         </span>
                                                     </td>
                                                     <td class="col-xs-1 col-md-1 text-center">
                                                         <span class="precio-promo-1">
-                                                            <span data-toggle="tooltip" data-placement="right" title="{{ sucursal.preciosProducto.promo1.descripcion }}" tooltip="">
+                                                            <span data-toggle="tooltip" data-placement="right" title="{{ sucursal.preciosProducto.promo1.descripcion }}" tooltip>
                                                                 {{ sucursal.preciosProducto.promo1.precio | currency2 }}
                                                             </span>
                                                         </span>
                                                     </td>
                                                     <td class="col-xs-1 col-md-1 text-center">
                                                         <span class="precio-promo-2">
-                                                            <span data-toggle="tooltip" data-placement="right" title="{{ sucursal.preciosProducto.promo2.descripcion }}" tooltip="">
+                                                            <span data-toggle="tooltip" data-placement="right" title="{{ sucursal.preciosProducto.promo2.descripcion }}" tooltip>
                                                                 {{ sucursal.preciosProducto.promo2.precio | currency2 }}
                                                             </span>
                                                         </span>
@@ -713,7 +770,7 @@
                                 <ul class="pagination">
                                     <li>
                                         <a ng-click="cambiarPagina(paginaActual - 1)" ng-disabled="paginaActual == 0" aria-label="Previous">
-                                            <span aria-hidden="true">«</span>
+                                            <span aria-hidden="true">&laquo;</span>
                                         </a>
                                     </li>
 
@@ -723,13 +780,15 @@
 
                                     <li>
                                         <a ng-click="cambiarPagina(paginaActual + 1)" ng-disabled="paginaActual == totalPaginas" aria-label="Next">
-                                            <span aria-hidden="true">»</span>
+                                            <span aria-hidden="true">&raquo;</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </section>
+
+                    <a href="contacto" class="hidden">contacto</a>
 
                     <div class="row">
                         <div class="section-actions is_area social-share" style="clear: both">
@@ -762,11 +821,12 @@
                             <div class="col-xs-12 col-md-8">
                                 <div class="col-xs-3 col-md-3 text-center no-padding imagen-producto">
                                     <div class="contenedor-imagen">
-                                        <img alt="{{ detalleProducto.nombre }}" class="img-rounded" ng-src="{{ agrupable.id | categoriaUrl }}" fallback-src="/img/no-image.png">
+                                        <img alt="{{ detalleProducto.nombre }}" class="img-rounded" ng-src="{{ agrupable.legacyId | categoriaUrl }}" fallback-src="/img/no-image.png" />
                                     </div>
                                 </div>
                                 <div class="col-xs-8 col-md-7 descripcion">
                                     <span>
+                                        {{ agrupable.padres[agrupable.padres.length - 1] }} -
                                         {{ agrupable.nombre }}
                                         <small class="text-muted">
                                             <br> (en {{ agrupable.padres[0] ? agrupable.padres[0] : agrupable.padres }})
@@ -801,7 +861,12 @@
                                         <dd>
                                             <div class="form-group">
                                                 <label for="tiposDeComercio">Tipos de comercio ({{ tiposSucursal.length }})</label>
-                                                <select class="form-control" id="tiposDeComercio" ng-model="filtroTipoComercio" ng-options="o for o in tiposSucursal" ng-change="refrescarSucursales()" ng-init="filtroTipoComercio = null" allow-single-deselect="true">
+                                                <select class="form-control" id="tiposDeComercio"
+                                                        ng-model="filtroTipoComercio"
+                                                        ng-options="o for o in tiposSucursal"
+                                                        ng-change="refrescarSucursales()"
+                                                        ng-init="filtroTipoComercio = null"
+                                                        allow-single-deselect="true">
                                                     <option value="">Todos</option>
                                                 </select>
                                             </div>
@@ -809,7 +874,12 @@
                                         <dd>
                                             <div class="form-group">
                                                 <label for="comercios">Comercios ({{ banderasComercio.length }})</label>
-                                                <select class="form-control" id="comercios" ng-model="filtroBanderaComercio" ng-options="o for o in banderasComercio" ng-change="refrescarSucursales()" ng-init="filtroBanderaComercio = null" allow-single-deselect="true">
+                                                <select class="form-control" id="comercios"
+                                                        ng-model="filtroBanderaComercio"
+                                                        ng-options="o for o in banderasComercio"
+                                                        ng-change="refrescarSucursales()"
+                                                        ng-init="filtroBanderaComercio = null"
+                                                        allow-single-deselect="true">
                                                     <option value="">Todos</option>
                                                 </select>
                                             </div>
@@ -866,7 +936,8 @@
                                             <td class="col-xs-2 col-md-2 detalle-distancia">
                                                 {{ sucursal.distancia | distancia }}
                                             </td>
-                                            <td class="col-xs-2 col-md-2 detalle-precio" ng-class="{'bg-color-2': sucursal.masBarata}">
+                                            <td class="col-xs-2 col-md-2 detalle-precio"
+                                                ng-class="{'bg-color-2': sucursal.masBarata}">
                                                 <span class="precio-lista">
                                                     {{ sucursal.precio_min | currency3 }} a {{ sucursal.precio_max | currency3 }}
                                                 </span>
@@ -877,7 +948,7 @@
                                                 </span>
                                             </td>
                                             <td class="col-xs-1 col-md-1 text-center">
-                                                <a class="text-success" data-toggle="tooltip" data-placement="top" title="Aquí podrá encontrar las variedades del producto seleccionado disponibles en este comercio" tooltip="" id="ver-no-comparables-en-mercado">
+                                                <a class="text-success" data-toggle="tooltip" data-placement="top" title="Aquí podrá encontrar las variedades del producto seleccionado disponibles en este comercio" tooltip id="ver-no-comparables-en-mercado">
                                                     <p class="ver">
                                                         <img src="img/iconos/ver.png" alt="">
                                                     </p>
@@ -899,7 +970,7 @@
                                 <div class="col-xs-12 col-md-8">
                                     <div class="col-md-3 col-xs-4 text-center no-padding imagen-producto">
                                         <div class="contenedor-imagen">
-                                            <img class="sizeFix" alt="{{ agrupable.nombre }}" ng-src="{{ agrupable.id | categoriaUrl }}" fallback-src="/img/no-image.png">
+                                            <img class="sizeFix" alt="{{ agrupable.nombre }}" ng-src="{{ agrupable.legacyId | categoriaUrl }}" fallback-src="/img/no-image.png">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-xs-8 descripcion">
@@ -909,10 +980,13 @@
                                             </div>
                                         </div>-->
                                         <span>
-                                            {{ agrupable.nombre }} / {{ sucursalSeleccionadaAgrupable.bandera_descripcion }}
+                                            {{ agrupable.padres[agrupable.padres.length -1] }} -
+                                            {{ agrupable.nombre }}
+                                            <br />
+                                            {{ sucursalSeleccionadaAgrupable.bandera_descripcion }}
                                             {{ sucursalSeleccionadaAgrupable.direccion }} | {{ sucursalSeleccionadaAgrupable.localidad }}
                                             <small class="text-muted">
-                                                <br>
+                                                <br />
                                                 (en {{ agrupable.padres[0] ? agrupable.padres[0] : agrupable.padres }})
                                             </small>
                                         </span>
@@ -920,7 +994,7 @@
                                 </div>
                             </div>
                         </form>
-                        <div>
+                        <div ng-show="productosAgrupablesEnSucursal.length > 0">
                             <table class="table table-striped tabla-comparativa desktop no-comparable table-responsive detalle-mercado-no-comparable">
                                 <thead>
                                     <tr>
@@ -948,7 +1022,7 @@
                                         <td class="col-md-4 detalle-mercado">
                                             <div class="col-md-2 text-center no-padding">
                                                 <div class="contenedor-imagen">
-                                                    <img alt="{{ producto.producto_descripcion }}" class="img-rounded" ng-src="{{ producto.producto_sepa_id | productoUrl }}" fallback-src="/img/no-image.png">
+                                                    <img alt="{{ producto.producto_descripcion }}" class="img-rounded" ng-src="{{ agrupable.legacyId | categoriaUrl }}" fallback-src="/img/no-image.png" />
                                                 </div>
                                             </div>
                                             <div class="col-md-10 contenedor-producto-no-agrupable">
@@ -966,12 +1040,12 @@
                                             </span>
                                         </td>
                                         <td class="col-md-2">
-                                            <span data-toggle="tooltip" data-placement="right" title="{{ producto.precio_leyenda_promo1 }}" tooltip="">
+                                            <span data-toggle="tooltip" data-placement="right" title="{{ producto.precio_leyenda_promo1 }}" tooltip>
                                                 <p class="precio-siva" ng-show="producto.precio_unitario_promo1">{{ producto.precio_unitario_promo1 | currency2 }}</p>
                                             </span>
                                         </td>
                                         <td class="col-md-2">
-                                            <span data-toggle="tooltip" data-placement="right" title="{{ producto.precio_leyenda_promo2 }}" tooltip="">
+                                            <span data-toggle="tooltip" data-placement="right" title="{{ producto.precio_leyenda_promo2 }}" tooltip>
                                                 <p class="precio-siva" ng-show="producto.precio_unitario_promo2">{{ producto.precio_unitario_promo2 | currency2 }}</p>
                                             </span>
                                         </td>
@@ -1000,7 +1074,7 @@
                                         <td class="col-xs-6 detalle-mercado">
                                             <div class="col-md-4 text-center">
                                                 <div class="contenedor-imagen">
-                                                    <img alt="{{ producto.producto_descripcion }}" class="img-rounded" ng-src="{{ producto.producto_sepa_id | productoUrl }}" fallback-src="{{ agrupable.id | categoriaUrl }}">
+                                                    <img alt="{{ producto.producto_descripcion }}" class="img-rounded" ng-src="{{ producto.producto_sepa_id | productoUrl }}" fallback-src="{{ agrupable.id | categoriaUrl }}" />
                                                 </div>
                                             </div>
                                             <div class="contenedor-descripcion">
@@ -1080,24 +1154,23 @@
                             </div>
                             <div class="row" ng-hide="lista.length == 0">
                                 <div class="col-md-12">
-                                    <a class="btn-mostrar-opciones" id="filtros-comparativa">Mostrar Filtros &nbsp; <i class="fa fa-caret-down fa-lg"></i></a>
+                                    <a class="btn-mostrar-opciones" id="filtros-comparativa">
+                                        Mostrar Filtros &nbsp;
+                                        <i class="fa fa-caret-down fa-lg"></i>
+                                    </a>
                                 </div>
                             </div>
                             <div class="row filtros-comercios" style="display:none" id="filtros-tabla-comparativa" ng-hide="lista.length == 0">
-                                <div class="col-md-3">
-                                    <label for="ordenar-comercios">
-                                        Ordenar comercios
-                                    </label>
-                                    <select id="ordenar-comercios" class="form-control" ng-model="ordenamientoComparativa" ng-options="o.value as o.descripcion for o in ordenamientosDisponiblesComparativa" ng-change="comparar(false, true)"></select>
-
-
-                                </div>
-
                                 <div class="col-md-3 contenedor-chosen">
                                     <label for="tipo-comercio">
                                         Tipo de Comercio ({{ tiposSucursal.length }})
                                     </label>
-                                    <select class="form-control" ng-model="filtroTipoComercio" ng-options="o for o in tiposSucursal" ng-change="refrescarSucursales()" ng-init="filtroTipoComercio = null" allow-single-deselect="true">
+                                    <select class="form-control"
+                                            ng-model="filtroTipoComercio"
+                                            ng-options="o for o in tiposSucursal"
+                                            ng-change="refrescarSucursales()"
+                                            ng-init="filtroTipoComercio = null"
+                                            allow-single-deselect="true">
                                         <option value="">Todos</option>
                                     </select>
                                 </div>
@@ -1105,7 +1178,12 @@
                                     <label for="comercios">
                                         Elegir comercio ({{ banderasComercio.length }})
                                     </label>
-                                    <select class="form-control" id="comercios" ng-model="filtroBanderaComercio" ng-options="o as (o | capitalize) for o in banderasComercio" ng-change="refrescarSucursales()" ng-init="filtroBanderaComercio = null" allow-single-deselect="true">
+                                    <select class="form-control" id="comercios"
+                                            ng-model="filtroBanderaComercio"
+                                            ng-options="o as (o | capitalize) for o in banderasComercio"
+                                            ng-change="refrescarSucursales()"
+                                            ng-init="filtroBanderaComercio = null"
+                                            allow-single-deselect="true">
                                         <option value="">Todos</option>
                                     </select>
                                 </div>
@@ -1125,28 +1203,43 @@
                             No tiene seleccionado productos para comparar. Agregue primero productos a la lista.
                         </div>
 
-                        <div class="alert alert-info mensaje-04" ng-show="(productosEnComparativa.length == 0 || preciosEnComparativa.length == 0) &amp;&amp; lista.length &gt; 0">
+                        <div class="alert alert-info mensaje-04" ng-show="(productosEnComparativa.length == 0 || preciosEnComparativa.length == 0) && lista.length > 0">
                             La búsqueda seleccionada no arrojó resultados.
                         </div>
                     </article>
+
                     <div class="table-responsive" ng-hide="lista.length == 0">
                         <table class="table table-striped tabla-comparativa desktop">
                             <thead>
                                 <tr>
                                     <th class="col-md-2 detalle-articulo">
+                                        <div class="contenedor-ordenamiento">
+                                            <form>
+                                                <label for="ordenar-comercios">
+                                                    Ordenar comercios
+                                                </label>
+                                                <select id="ordenar-comercios" class="form-control"
+                                                        ng-model="ordenamientoComparativa"
+                                                        ng-options="o.value as o.descripcion for o in ordenamientosDisponiblesComparativa"
+                                                        ng-change="comparar(false, true)"></select>
+                                            </form>
+                                        </div>
                                         <div class="tituloTabla bg-color-1">
                                             <h1>
                                                 Mi Lista
                                             </h1>
                                             <span>
-                                                <ng-pluralize count="lista.length" when="{'1': '({} producto)', 'other': '({} productos)'}">
+                                                <ng-pluralize count="lista.length"
+                                                              when="{'1': '({} producto)', 'other': '({} productos)'}">
                                                 </ng-pluralize>
                                             </span>
                                         </div>
                                     </th>
                                     <th class="col-md-2 detalle-mercado" ng-repeat="sucursal in sucursalesSeleccionadas track by $index">
 
-                                        <select chosen="" data-placeholder-text-single="'Cambiar comercio'" no-results-text="'Oops, no hay resultados para '" ng-model="sucursalesSeleccionadas[$index]" ng-options="s as (s | nombreSucursal) for s in sucursales" ng-change="comparar(true)">
+                                        <select chosen data-placeholder-text-single="'Cambiar comercio'" no-results-text="'Oops, no hay resultados para '" ng-model="sucursalesSeleccionadas[$index]"
+                                                ng-options="s as (s | nombreSucursal) for s in sucursales" ng-change="comparar('filter')"
+                                                data-placeholder-text-single="'Cambiar comercio'">
                                             <option value=""></option>
                                         </select>
                                         <div class="tituloMercado bg-color-1">
@@ -1173,14 +1266,15 @@
 
                                             <p class="cant-productos">
                                                 ({{ totalProductosPorSucursal(sucursalesSeleccionadas[$index].id) }}
-                                                <ng-pluralize count="totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)" when="{'1': 'producto disponible', 'other': 'productos disponibles'}">
+                                                <ng-pluralize count="totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)"
+                                                              when="{'1': 'producto disponible', 'other': 'productos disponibles'}">
                                                 </ng-pluralize>)
                                             </p>
                                         </div>
                                     </th>
-                                    <th class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;2"></th>
-                                    <th class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;3"></th>
-                                    <th class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;4"></th>
+                                    <th class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <2"></th>
+                                    <th class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <3"></th>
+                                    <th class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <4"></th>
                                 </tr>
                             </thead>
 
@@ -1189,10 +1283,10 @@
                                     <td class="col-md-2 detalle-articulo">
                                         <div class="text-center contenedor-producto">
                                             <div class="contenedor-imagen do-ver-detalle-producto" ng-click="verDetalleProducto(producto)">
-                                                <img alt="{{ producto.nombre }}" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png">
+                                                <img alt="{{ producto.nombre }}" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png" />
                                             </div>
                                             <div class="do-ver-detalle-producto" ng-click="verDetalleProducto(producto)">
-                                                {{producto.nombre | capitalize}}
+                                                {{producto.nombre}}
                                             </div>
                                             <div>
                                                 <small>
@@ -1206,7 +1300,7 @@
                                     </td>
                                     <td class="col-md-2 detalle-precio" ng-repeat="sucursal in sucursalesSeleccionadas track by $index">
                                         <div class="contenedor-detalle-precio" ng-class="{'bg-color-2': esElMasBaratoPara(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), producto.id)}">
-                                            <span class="no-disponible-ni-similares" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridos == undefined &amp;&amp; getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista == 0">
+                                            <span class="no-disponible-ni-similares" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridos == undefined && getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista == 0">
                                                 <div class="no-disponible">
                                                     No Disponible
                                                 </div>
@@ -1230,11 +1324,12 @@
 
                                                         <div class="item active" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0">
                                                             <div class="contenedor-imagen">
-                                                                <img alt="{{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).nombre }}" ng-src="{{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).id | productoUrl }}" fallback-src="/img/no-image.png">
+                                                                <img alt="{{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).nombre }}"
+                                                                     ng-src="{{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).id | productoUrl }}" fallback-src="/img/no-image.png">
                                                             </div>
 
                                                             <div class="nombre-producto">
-                                                                {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).nombre | capitalize}}
+                                                                {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).nombre}}
                                                             </div>
                                                             <small>
                                                                 {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).id | ean }}
@@ -1242,15 +1337,20 @@
                                                             <span class="titulo-precio-lista">
                                                                 Precio de lista
                                                             </span>
-                                                            <span class="precio-lista" ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).seleccionado}" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id))">
+                                                            <span class="precio-lista"
+                                                                  ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).seleccionado}"
+                                                                  ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id))">
                                                                 {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista | currency2}}
                                                             </span>
 
-                                                            <hr ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio || getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio">
+                                                            <hr ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio || getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio" />
                                                             <span class="titulo-promociones" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio || getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio">
                                                                 Promoción
                                                             </span>
-                                                            <span class="precio-promo-1" data-placement="left" data-toggle="tooltip" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip="">
+                                                            <span class="precio-promo-1" data-placement="left" data-toggle="tooltip"
+                                                                  ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio"
+                                                                  title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}"
+                                                                  ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip>
                                                                 <span ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.seleccionado}">
                                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio | currency2 }}
                                                                     <small>
@@ -1258,7 +1358,10 @@
                                                                     </small>
                                                                 </span>
                                                             </span>
-                                                            <span class="precio-promo-2" data-placement="left" data-toggle="tooltip" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip="">
+                                                            <span class="precio-promo-2" data-placement="left" data-toggle="tooltip"
+                                                                  ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio"
+                                                                  title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}"
+                                                                  ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip>
                                                                 <span ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.seleccionado}">
                                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio | currency2 }}
                                                                     <small>
@@ -1284,7 +1387,7 @@
                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista | currency2}}
                                                 </span>
                                             </span>
-                                            <span class="precio-promo-1" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio &amp;&amp; getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridoActual == undefined" data-toggle="tooltip" data-placement="{{ $last ? 'left' : 'right' }}" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1)" tooltip="">
+                                            <span class="precio-promo-1" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio && getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridoActual == undefined" data-toggle="tooltip" data-placement="{{ $last ? 'left' : 'right' }}" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1)" tooltip>
                                                 <span ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.seleccionado}">
                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio | currency2 }}
                                                 </span>
@@ -1292,8 +1395,8 @@
                                                     Promo A
                                                 </small>
                                             </span>
-                                            <br>
-                                            <span class="precio-promo-2" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio &amp;&amp; getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridoActual == undefined" data-toggle="tooltip" data-placement="{{ $last ? 'left' : 'right' }}" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip="">
+                                            <br />
+                                            <span class="precio-promo-2" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio && getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridoActual == undefined" data-toggle="tooltip" data-placement="{{ $last ? 'left' : 'right' }}" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip>
                                                 <span ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.seleccionado}">
                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio | currency2 }}
                                                 </span>
@@ -1303,9 +1406,9 @@
                                             </span>
                                         </div>
                                     </td>
-                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;2"></td>
-                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;3"></td>
-                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;4"></td>
+                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <2"></td>
+                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <3"></td>
+                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <4"></td>
                                 </tr>
                                 <tr class="fila-resumen">
                                     <td class="col-md-3 detalle-articulo res">
@@ -1344,9 +1447,9 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;2"></td>
-                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;3"></td>
-                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length &lt;4"></td>
+                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <2"></td>
+                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <3"></td>
+                                    <td class="col-md-2 detalle-mercado" ng-show="sucursalesSeleccionadas.length <4"></td>
                                 </tr>
                                 <tr class="fila-resumen2">
                                     <td class="col-md-3 detalle-articulo">
@@ -1365,7 +1468,8 @@
                                                 </h4>
                                                 <p class="cant-productos">
                                                     ({{ totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)}}
-                                                    <ng-pluralize count="totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)" when="{'1': 'producto disponible', 'other': 'productos disponibles'}">
+                                                    <ng-pluralize count="totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)"
+                                                                  when="{'1': 'producto disponible', 'other': 'productos disponibles'}">
                                                     </ng-pluralize>)
                                                 </p>
 
@@ -1383,7 +1487,8 @@
                                                     </div>
                                                     <div class="col-xs-6 col-md-8 menor-precio">
                                                         <span class="text-menor-precio">
-                                                            <ng-pluralize count="masBaratosPorSucursal(sucursalesSeleccionadas[$index].id)" when="{'1': 'producto a menor precio', 'other': 'productos a menor precio'}">
+                                                            <ng-pluralize count="masBaratosPorSucursal(sucursalesSeleccionadas[$index].id)"
+                                                                          when="{'1': 'producto a menor precio', 'other': 'productos a menor precio'}">
                                                             </ng-pluralize>
                                                         </span>
                                                     </div>
@@ -1401,26 +1506,26 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="col-md-2 detalle-mercado bg-color-1" ng-show="sucursalesSeleccionadas.length &lt;2"></td>
-                                    <td class="col-md-2 detalle-mercado bg-color-1" ng-show="sucursalesSeleccionadas.length &lt;3"></td>
-                                    <td class="col-md-2 detalle-mercado bg-color-1" ng-show="sucursalesSeleccionadas.length &lt;4"></td>
+                                    <td class="col-md-2 detalle-mercado bg-color-1" ng-show="sucursalesSeleccionadas.length <2"></td>
+                                    <td class="col-md-2 detalle-mercado bg-color-1" ng-show="sucursalesSeleccionadas.length <3"></td>
+                                    <td class="col-md-2 detalle-mercado bg-color-1" ng-show="sucursalesSeleccionadas.length <4"></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <a role="button" class="btn-default btn-resumen mobile bajar">
-                            <i class="fa fa-1x fa-chevron-down "></i>
-                        </a><a role="button" class="btn-default btn-resumen mobile subir" style="display:none">
-                            <i class="fa fa-1x fa-chevron-up "></i>
-                        </a><table class="table table-striped tabla-comparativa mobile bg-color-1" id="comparativa-mobile">
-
-
+                        <table class="table table-striped tabla-comparativa mobile bg-color-1" id="comparativa-mobile">
+                            <a role="button" class="btn-default btn-resumen mobile bajar">
+                                <i class="fa fa-1x fa-chevron-down "></i>
+                            </a>
+                            <a role="button" class="btn-default btn-resumen mobile subir" style="display:none">
+                                <i class="fa fa-1x fa-chevron-up "></i>
+                            </a>
                             <tbody>
                                 <tr ng-repeat="producto in lista">
                                     <td class="col-xs-12 detalle-articulo bg-color-1">
                                         <div class="col-xs-4 no-padding col-sm-3 text-center">
                                             <div class=" do-ver-detalle-producto" ng-click="verDetalleProducto(producto)">
                                                 <div class="contenedor-imagen">
-                                                    <img alt="{{ producto.nombre }}" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png">
+                                                    <img alt="{{ producto.nombre }}" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png" />
                                                 </div>
                                             </div>
 
@@ -1430,7 +1535,7 @@
                                             </a>
                                         </div>
                                         <div class="col-xs-8 col-sm-9 descripcion do-ver-detalle-producto" ng-click="verDetalleProducto(producto)">
-                                            {{producto.nombre | capitalize}}
+                                            {{producto.nombre}}
                                             <div>
                                                 {{ producto.id | ean }}
                                             </div>
@@ -1454,7 +1559,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-6">
-                                            <span class="no-disponible-ni-similares" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridos == undefined &amp;&amp;
+                                            <span class="no-disponible-ni-similares" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridos == undefined &&
                             getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista == 0">
                                                 <div class="no-disponible">
                                                     No Disponible
@@ -1478,26 +1583,29 @@
 
                                                         <div class="item active" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0">
                                                             <div class="contenedor-imagen">
-                                                                <img alt="{{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).nombre }}" ng-src="{{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).id | productoUrl }}" fallback-src="/img/no-image.png">
+                                                                <img alt="{{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).nombre }}"
+                                                                     ng-src="{{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).id | productoUrl }}" fallback-src="/img/no-image.png">
                                                             </div>
-                                                            <span class="precio-lista" ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).seleccionado}" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id))">
+                                                            <span class="precio-lista"
+                                                                  ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).seleccionado}"
+                                                                  ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id))">
                                                                 {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista | currency2}}
                                                             </span>
 
                                                             <div class="nombre-producto">
-                                                                {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).nombre | capitalize}}
+                                                                {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).nombre}}
                                                             </div>
                                                             <small>
                                                                 {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).id | ean }}
                                                             </small>
 
-                                                            <span class="precio-promo-1" data-placement="left" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio" data-toggle="tooltip" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1)" tooltip="">
+                                                            <span class="precio-promo-1" data-placement="left" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio" data-toggle="tooltip" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1)" tooltip>
                                                                 <span ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.seleccionado}">
                                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio | currency2 }}
                                                                 </span>
                                                                 Promo A
                                                             </span>
-                                                            <span class="precio-promo-2" data-placement="left" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio" data-toggle="tooltip" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip="">
+                                                            <span class="precio-promo-2" data-placement="left" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio" data-toggle="tooltip" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip>
                                                                 <span ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.seleccionado}">
                                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio | currency2 }}
                                                                 </span>
@@ -1521,7 +1629,7 @@
                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista | currency2}}
                                                 </span>
                                             </span>
-                                            <span class="precio-promo-1" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio &amp;&amp; getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridoActual == undefined" data-toggle="tooltip" data-placement="bottom" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1)" tooltip="">
+                                            <span class="precio-promo-1" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio && getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridoActual == undefined" data-toggle="tooltip" data-placement="bottom" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1)" tooltip>
                                                 <span ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.seleccionado}">
                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo1.precio | currency2 }}
                                                 </span>
@@ -1529,7 +1637,7 @@
                                                     Promo A
                                                 </small>
                                             </span>
-                                            <span class="precio-promo-2" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio &amp;&amp; getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridoActual == undefined" data-toggle="tooltip" data-placement="bottom" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip="">
+                                            <span class="precio-promo-2" ng-show="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio && getPrecio(producto.id, sucursalesSeleccionadas[$index].id).sugeridoActual == undefined" data-toggle="tooltip" data-placement="bottom" title="{{getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.descripcion}}" ng-if="getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista != 0" ng-click="seleccionarPrecio(getPrecio(producto.id, sucursalesSeleccionadas[$index].id), getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2)" tooltip>
                                                 <span ng-class="{active: getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.seleccionado}">
                                                     {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio | currency2 }}
                                                 </span>
@@ -1543,81 +1651,82 @@
 
                             </tbody>
                             <!--thead-->
-                            <tbody>
-                                <tr class="fila-resumen" id="res">
-                                    <td class="detalle-articulo bg-color-1 col-xs-12">
-                                        <span>
-                                            Resumen
-                                        </span>
-                                        <span></span>
-                                        <span>
-                                            De manera predeterminada se usa el precio de lista. Si seleccionás un precio con Promo A o B, se actualizarán los totales.
-                                        </span>
-                                    </td>
-                                    <td class="detalle-precio col-xs-12" ng-repeat="sucursal in sucursalesSeleccionadas track by $index" ng-class="{ 'bg-color-4': esElMenorPrecio(sucursalesSeleccionadas[$index].id) }">
-                                        <div class="col-xs-7">
-                                            <select class="form-control" no-results-text="'Oops, no hay resultados para '" ng-model="sucursalesSeleccionadas[$index]" ng-options="s as (s | nombreSucursal) for s in sucursales" ng-change="comparar(true)"></select>
-                                            <!--select class="form-control" ng-model="sucursalesSeleccionadas[$index]" ng-options="s as (s | nombreSucursal) for s in sucursales" ng-change="comparar()"></select-->
+                            <tr class="fila-resumen" id="res">
+                                <td class="detalle-articulo bg-color-1 col-xs-12">
+                                    <span>
+                                        Resumen
+                                    </span>
+                                    <span></span>
+                                    <span>
+                                        De manera predeterminada se usa el precio de lista. Si seleccionás un precio con Promo A o B, se actualizarán los totales.
+                                    </span>
+                                </td>
+                                <td class="detalle-precio col-xs-12" ng-repeat="sucursal in sucursalesSeleccionadas track by $index" ng-class="{ 'bg-color-4': esElMenorPrecio(sucursalesSeleccionadas[$index].id) }">
+                                    <div class="col-xs-7">
+                                        <select class="form-control" no-results-text="'Oops, no hay resultados para '" ng-model="sucursalesSeleccionadas[$index]" ng-options="s as (s | nombreSucursal) for s in sucursales" ng-change="comparar('filter')"></select>
+                                        <!--select class="form-control" ng-model="sucursalesSeleccionadas[$index]" ng-options="s as (s | nombreSucursal) for s in sucursales" ng-change="comparar()"></select-->
 
-                                            <div class="contenedor-imagen">
-                                                <img alt="{{ sucursalesSeleccionadas[$index].banderaDescripcion }}" ng-src="{{ sucursalesSeleccionadas[$index] | logoUrl }}" fallback-src="/img/comercio-no-image.png">
-                                            </div>
-                                            <div class="contenedor-descripcion">
-                                                <p class="direccion">
-                                                    {{sucursalesSeleccionadas[$index].direccion}}
-                                                </p>
-
-                                                <p class="ciudad">
-                                                    {{sucursalesSeleccionadas[$index].localidad}}
-                                                </p>
-
-                                                <p class="distancia">
-                                                    {{sucursalesSeleccionadas[$index].distanciaDescripcion}}
-                                                </p>
-                                            </div>
-                                            <div class="row detalle-producto-resumen">
-                                                <div class="col-xs-4">
-                                                    <h4>
-                                                        {{ masBaratosPorSucursal(sucursalesSeleccionadas[$index].id) }}
-                                                    </h4>
-                                                </div>
-                                                <div class="col-xs-6">
-                                                    <span class="text-menor-precio">
-                                                        <ng-pluralize count="masBaratosPorSucursal(sucursalesSeleccionadas[$index].id)" when="{'1': 'producto a menor precio', 'other': 'productos a menor precio'}">
-                                                        </ng-pluralize>
-                                                    </span>
-                                                </div>
-                                                <div class="col-xs-12">
-                                                    <hr>
-                                                </div>
-                                            </div>
+                                        <div class="contenedor-imagen">
+                                            <img alt="{{ sucursalesSeleccionadas[$index].banderaDescripcion }}" ng-src="{{ sucursalesSeleccionadas[$index] | logoUrl }}" fallback-src="/img/comercio-no-image.png">
                                         </div>
-                                        <div class="col-xs-5">
-                                            <h4>
-                                                {{ getTotalGeneralPorSucursal(sucursalesSeleccionadas[$index].id) | currency2 }}
-                                            </h4>
-                                            <p class="cant-productos">
-                                                ({{ totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)}}
-                                                <ng-pluralize count="totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)" when="{'1': 'producto disponible', 'other': 'productos disponibles'}">
-                                                </ng-pluralize>)
+                                        <div class="contenedor-descripcion">
+                                            <p class="direccion">
+                                                {{sucursalesSeleccionadas[$index].direccion}}
                                             </p>
-                                            <hr>
-                                        </div>
-                                        <div class="contenedor-precio-total">
-                                            <div class="contenedor-precio-disponibles">
-                                                Total para los productos que están disponibles en los 4 comercios:
-                                                <h3>
-                                                    {{ getTotalPorSucursal(sucursalesSeleccionadas[$index].id) | currency2 }}
-                                                </h3>
-                                                <p class="cant-productos">({{ totalProductosComparados() | productos}})</p>
 
+                                            <p class="ciudad">
+                                                {{sucursalesSeleccionadas[$index].localidad}}
+                                            </p>
+
+                                            <p class="distancia">
+                                                {{sucursalesSeleccionadas[$index].distanciaDescripcion}}
+                                            </p>
+                                        </div>
+                                        <div class="row detalle-producto-resumen">
+                                            <div class="col-xs-4">
+                                                <h4>
+                                                    {{ masBaratosPorSucursal(sucursalesSeleccionadas[$index].id) }}
+                                                </h4>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <span class="text-menor-precio">
+                                                    <ng-pluralize count="masBaratosPorSucursal(sucursalesSeleccionadas[$index].id)"
+                                                                  when="{'1': 'producto a menor precio', 'other': 'productos a menor precio'}">
+                                                    </ng-pluralize>
+                                                </span>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <hr />
                                             </div>
                                         </div>
-                                    </td>
-                                </tr>
-                                <!--/thead-->
-                            </tbody>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <h4>
+                                            {{ getTotalGeneralPorSucursal(sucursalesSeleccionadas[$index].id) | currency2 }}
+                                        </h4>
+                                        <p class="cant-productos">
+                                            ({{ totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)}}
+                                            <ng-pluralize count="totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)"
+                                                          when="{'1': 'producto disponible', 'other': 'productos disponibles'}">
+                                            </ng-pluralize>)
+                                        </p>
+                                        <hr />
+                                    </div>
+                                    <div class="contenedor-precio-total">
+                                        <div class="contenedor-precio-disponibles">
+                                            Total para los productos que están disponibles en los 4 comercios:
+                                            <h3>
+                                                {{ getTotalPorSucursal(sucursalesSeleccionadas[$index].id) | currency2 }}
+                                            </h3>
+                                            <p class="cant-productos">({{ totalProductosComparados() | productos}})</p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--/thead-->
                         </table>
+
 
                         <p class="disponibilidad">
                             Disponibilidad sujeta a stock.
@@ -1649,6 +1758,149 @@
                             </div>
                         </div>
                     </div>
+                </article>
+
+                <article class="vista-impresion">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr class="fila-encabezado">
+                                <td class="col-sm-4" rowspan="2">
+                                    <h6>
+                                        Mi Lista
+                                    </h6>
+                                    <span>
+                                        <ng-pluralize count="lista.length"
+                                                      when="{'1': '({} producto)', 'other': '({} productos)'}">
+                                        </ng-pluralize>
+                                    </span>
+                                </td>
+                                <td class="col-sm-2 detalle-mercado" ng-repeat="sucursal in sucursalesSeleccionadas track by $index">
+                                    <div class="col-sm-4">
+                                        <div class="contenedor-imagen">
+                                            <img alt="sucursalesSeleccionadas[$index].banderaDescripcion" ng-src="{{ sucursalesSeleccionadas[$index] | logoUrl }}" fallback-src="/img/comercio-no-image.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="contenedor-descripcion">
+                                            <p class="direccion">
+                                                {{sucursalesSeleccionadas[$index].direccion}}
+                                            </p>
+
+                                            <p class="ciudad">
+                                                {{sucursalesSeleccionadas[$index].localidad}}
+                                            </p>
+
+                                            <p class="distancia">
+                                                ({{sucursalesSeleccionadas[$index].distanciaDescripcion}})
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="fila-titulos">
+                                <td>
+                                    <div class="col-sm-6">
+                                        <p>
+                                            Precio lista
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p>
+                                            Promoción
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="col-sm-6">
+                                        <p>
+                                            Precio lista
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p>
+                                            Promoción
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="col-sm-6">
+                                        <p>
+                                            Precio lista
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p>
+                                            Promoción
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="col-sm-6">
+                                        <p>
+                                            Precio lista
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p>
+                                            Promoción
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="fila-producto" ng-repeat="producto in lista">
+                                <td class="producto">
+                                    <div class="col-sm-2 contenedor-imagen">
+                                        <img alt="{{ producto.nombre }}" ng-src="{{ producto.id | productoUrl }}" fallback-src="/img/no-image.png" />
+                                    </div>
+                                    <div class="col-sm-10 nombre">
+                                        {{producto.nombre}}
+                                    </div>
+                                </td>
+                                <td class="col-md-2 detalle-precio" ng-repeat="sucursal in sucursalesSeleccionadas track by $index">
+                                    <div class="col-sm-6 precio-lista" ng-class="{'hidden-print': !getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista}">
+                                        <span>
+                                            {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista | currency2 }}
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-6 promocion" ng-class="{'hidden-print': !getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista}">
+                                        <span>
+                                            {{ getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio | currency2 }}
+                                        </span>
+                                        <span ng-class="{'hidden-print': getPrecio(producto.id, sucursalesSeleccionadas[$index].id).promo2.precio}">
+                                            -
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 no-disponible" ng-class="{'hidden-print': getPrecio(producto.id, sucursalesSeleccionadas[$index].id).precioLista}">
+                                        <span>
+                                            No Disponible
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="fila-resumen">
+                                <td>
+                                    <p>
+                                        Resumen
+                                    </p>
+                                    <span>
+                                        De manera predeterminada se usa el precio de lista.
+                                    </span>
+                                </td>
+                                <td class="total-mercado" ng-repeat="sucursal in sucursalesSeleccionadas track by $index">
+                                    <h4 class="total">
+                                        {{ getTotalGeneralPorSucursal(sucursalesSeleccionadas[$index].id) | currency2 }}
+                                    </h4>
+                                    <p class="cant-productos">
+                                        total por
+                                        ({{ totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)}}
+                                        <ng-pluralize count="totalProductosPorSucursal(sucursalesSeleccionadas[$index].id)"
+                                                      when="{'1': 'producto disponible', 'other': 'productos disponibles'}">
+                                        </ng-pluralize>)
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </article>
 
 
@@ -1958,7 +2210,7 @@
                                 <div class="row resp">
                                     <div class="col-md-7">
                                         <p>
-                                            Dado que no todos los comercios ofrecen el mismo surtido, en caso de tener productos no disponibles, podrás seleccionar dentro de tu comparativa, un producto similar a aquel que no esté disponible en alguno de los comercios. Si bien puede cambiar la presentación, el peso y su precio, te proponemos usar esta herramienta para lograr tener listas completas con productos similares. <br>
+                                            Dado que no todos los comercios ofrecen el mismo surtido, en caso de tener productos no disponibles, podrás seleccionar dentro de tu comparativa, un producto similar a aquel que no esté disponible en alguno de los comercios. Si bien puede cambiar la presentación, el peso y su precio, te proponemos usar esta herramienta para lograr tener listas completas con productos similares. <br />
                                             Es posible que un comercio no tenga disponible el producto buscado ni tampoco una opción de reemplazo para el mismo. En este caso, no se podrá seleccionar un producto similar.
                                         </p>
                                     </div>
@@ -1971,7 +2223,7 @@
                                 <div class="row resp">
                                     <div class="col-xs-12 col-md-7">
                                         <p>
-                                            Podés comparar las listas mirando el Resumen, ahí encontrarás la cantidad de productos a menor precio de cada comercio. <br>
+                                            Podés comparar las listas mirando el Resumen, ahí encontrarás la cantidad de productos a menor precio de cada comercio. <br />
                                             Además te muestra un Total para los productos que están disponibles en los 4 comercios, resaltando en verde el total a menor precio, y un segundo Total para todos los productos disponibles en ese comercio, aunque no estén en otros.
                                         </p>
                                     </div>
@@ -2041,7 +2293,7 @@
                                 <div id="faq2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqEncabezado2">
                                     <div class="panel-body">
                                         <p>
-                                            Comenzá a escribir el nombre del producto que buscás en el casillero Producto y el sitio te irá ofreciendo sugerencias, también podés hacer click en el ícono de las categorías.
+                                            Escribí el nombre del producto que buscás en el casillero Producto. También podés hacer click en el ícono de las categorías.
                                         </p>
                                     </div>
                                 </div>
@@ -2074,7 +2326,7 @@
                                     <div class="panel-body">
                                         <p>
                                             Por supuesto. Podés cambiarla para buscar los mejores precios cerca del lugar que elegís.
-                                            <br>
+                                            <br />
                                             Hacé clic en “Cambiar mi ubicación” y elegí otro comercio de los 30 más cercanos a tu ubicación.
                                         </p>
                                     </div>
@@ -2124,7 +2376,7 @@
                                     <div class="panel-body">
                                         <p>
                                             Buscá un producto y hacé clic en “Agregar”.
-                                            <br>
+                                            <br />
                                             Si querés quitar algún artículo, hace clic en “Quitar”.
                                         </p>
                                     </div>
@@ -2142,7 +2394,7 @@
                                     <div class="panel-body">
                                         <p>
                                             Buscá un producto y hacé clic en “Agregar”.
-                                            <br>
+                                            <br />
                                             Sí. Imprimila o enviala por mail a la dirección que quieras.
                                         </p>
                                     </div>
@@ -2176,21 +2428,21 @@
                                     <div class="panel-body">
                                         <p>
                                             Después de seleccionar los productos, hacé clic en el botón “Comparar Precios”, vas a ver los productos que elegiste y los precios de cada uno en los 4 comercios más cercanos. Podés elegir los 4 que quieras de una lista de 30 sólo haciendo clic en “cambiar comercio”.
-                                            <br>
+                                            <br />
                                             Los productos más baratos se indican en verde. Para determinar el más barato se utiliza el precio de lista, pero podés encontrar un precio menor en las Promo A y B. Fijate las condiciones de las promociones ubicándote sobre el precio de la promo.
-                                            <br>
+                                            <br />
                                             Elegí el precio que quieras: Precio de Lista, Promo A o B y al final encontrarás un resumen que suma los precios de los productos “comunes” a todos los comercios y también el total de tu lista en cada comercio.
-                                            <br>
+                                            <br />
                                             También podrás ver por cada comercio la cantidad de productos con precio que te ofrece y la cantidad de productos al menor precio.
-                                            <br>
+                                            <br />
                                             Ahora te toca elegir a vos dónde comprar:
-                                            <br>
+                                            <br />
                                             - En el comercio que tiene toda la lista de productos,
-                                            <br>
+                                            <br />
                                             - En el comercio con la mayor cantidad de productos al menor precio,
-                                            <br>
+                                            <br />
                                             - También podés elegir comprar tu lista en diferentes comercios,
-                                            <br>
+                                            <br />
                                             - Donde vos elijas.
                                         </p>
                                     </div>
@@ -2208,7 +2460,7 @@
                                     <div class="panel-body">
                                         <p>
                                             Tené en cuenta que los precios son actualizados todos los días.
-                                            <br>
+                                            <br />
                                             Si cuando llegás al comercio, el precio en la góndola no coincide con el que te informa Precios Claros para ese día, o bien no encontrás el producto informado, tenés 3 opciones: podés informarlo a través de la opción <a href="#modalReclamo" data-toggle="modal" onclick="launch_make_suggestion();">“Contanos tu experiencia”</a> , realizar un “Reclamo” o llamar al 0800-666-1518
                                         </p>
                                     </div>
@@ -2248,11 +2500,11 @@
                             </div>
                         </div>
 
-                        <br>
+                        <br />
 
                         <hr>
                         <h3 class="text-center">Acerca de Precios Claros</h3>
-                        <br>
+                        <br />
 
                         <div class="panel-group" id="acerdaDePreciosClaros" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-primary">
@@ -2318,7 +2570,7 @@
                                     <div class="panel-body">
                                         <p>
                                             Los comercios obligados a informar son aquellos que realizan venta minorista y mayorista de productos de consumo masivo (a excepción de medianas y pequeñas empresas).
-                                            <br>
+                                            <br />
                                             Para el resto de los comercios es opcional la adhesión a Precios Claros.
                                         </p>
                                     </div>
@@ -2400,32 +2652,32 @@
                                     <div class="panel-body">
                                         <p>
                                             En Precios Claros vas a encontrar precios de comercios minoristas y mayoristas:
-                                            <br>
+                                            <br />
                                             <b>Minoristas:</b> publican el precio de lista, y, de estar disponibles, los precios de hasta 2 promociones.
-                                            <br>
+                                            <br />
                                             <b>Mayoristas:</b> publican el precio de lista unitario con y sin IVA y la unidad mínima de venta para ese precio (Cantidad por bulto). Puede suceder que los comercios ofrezcan en sus puntos de venta distintas unidades de venta, pero en Precios Claros solo se publica una.
-                                            <br>
+                                            <br />
                                             En el siguiente ejemplo se muestran los precios publicados llevando 6 unidades, aunque el comercio ofrece en su punto de venta otros precios llevando 12 o 24 unidades, pero no están publicados en Precios Claros.
                                         </p>
                                         <div class="text-center">
                                             <b>
-                                                Mermelada De Frutilla X 454 Gr <br>
-                                                Precio unitario <br>
-                                                S/Iva $30,50 <br>
-                                                C/Iva $36,90 <br>
-                                                Cantidad por bulto: 6 <br>
+                                                Mermelada De Frutilla X 454 Gr <br />
+                                                Precio unitario <br />
+                                                S/Iva $30,50 <br />
+                                                C/Iva $36,90 <br />
+                                                Cantidad por bulto: 6 <br />
                                             </b>
                                         </div>
-                                        <br>
+                                        <br />
                                         <p>
                                             <b>Precio de lista:</b> se refiere al precio del producto en góndola sin ninguna promoción.
-                                            <br>
+                                            <br />
                                             También vas a poder ver 2 promociones que el comercio quiera comunicarte, del total de promociones que ofrece:
-                                            <br>
+                                            <br />
                                             <b>Precio Promo A:</b> de alcance general, cualquier consumidor puede acceder a ella sin necesidad de pertenecer a ningún grupo particular como, por ejemplo, estudiantes o jubilados.
-                                            <br>
+                                            <br />
                                             <b>Precio Promo B:</b> puede ser otra promoción de alcance general u otra particular según decisión del comercio. El comercio puede incluir tarjetas de fidelidad, tarjeta bancaria, estudiantes, jubilados, etc.
-                                            <br><br>
+                                            <br /><br />
                                             <small><b><i>* Importante: las promociones, en ningún caso, son propuestas por Precios Claros. Los comercios pueden ofrecerte más promociones que las publicadas.</i></b></small>
                                         </p>
                                     </div>
@@ -3174,10 +3426,9 @@
                                         <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                     </a>
                                     <div class="collapse list-group-submenu contenedorProductos" id="subcategoria37">
-                                        <a href="" class="list-group-item" isotónicas="" y="" energizantes<="" a="">
-                            </a>
-                                    </div><a href="" class="list-group-item" isotónicas="" y="" energizantes<="" a="">
-                            </a><a href="#subcategoria38" class="list-group-item subcategoria" data-toggle="collapse" data-parent="#subcategoria22">
+                                        <a href="" class="list-group-item" Isotónicas y Energizantes</a>
+                                    </div>
+                                    <a href="#subcategoria38" class="list-group-item subcategoria" data-toggle="collapse" data-parent="#subcategoria22">
                                         Jugos
                                         <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                     </a>
@@ -3436,11 +3687,11 @@
                                     <div class="collapse list-group-submenu contenedorProductos" id="subcategoria58">
                                         <a href="" class="list-group-item">
                                             Films
-                                        </a><a href="" class="list-group-item">Pañuelos Descartables</a>
-                                        <a href="" class="list-group-item">Papel de Aluminio</a>
-                                        <a href="" class="list-group-item">Papel Higiénico</a>
-                                        <a href="" class="list-group-item">Rollos de Cocina</a>
-                                        <a href="" class="list-group-item">Servilletas</a>
+                                            <a href="" class="list-group-item">Pañuelos Descartables</a>
+                                            <a href="" class="list-group-item">Papel de Aluminio</a>
+                                            <a href="" class="list-group-item">Papel Higiénico</a>
+                                            <a href="" class="list-group-item">Rollos de Cocina</a>
+                                            <a href="" class="list-group-item">Servilletas</a>
                                     </div>
                                 </div>
                                 <a href="#categoria8" class="list-group-item categoria" data-toggle="collapse" data-parent="#productosInformados">
@@ -3544,7 +3795,7 @@
                             </div>
                         </div>
                         <div class="row text-center">
-                            <br><br>
+                            <br /><br />
                             <a class="btn btn-success btn-buscar-productos">
                                 <i class="fa fa-search"></i>
                                 COMENZA A BUSCAR PRODUCTOS
@@ -3602,7 +3853,7 @@
             <div class="row">
                 <div class="col-xs-10 col-sm-5 col-md-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-0">
                     <a href="http://consumidor.gob.ar/" target="_blank">
-                        <img alt="Dirección Nacional de Defensa del Consumidor" src="/img/logo_dn_defensa_del_consumidor.png" class="img-responsive footer-logo">
+                        <img alt="Dirección Nacional de Defensa del Consumidor" src="/img/logo_dn_defensa_del_consumidor.png" class="img-responsive footer-logo" />
                     </a>
                     <p class="small">
                         Los contenidos de preciosclaros.gob.ar están licenciados bajo
@@ -3661,7 +3912,7 @@
                 </div>
                 <div class="col-md-5 text-left">
                     <a href="http://argentina.gob.ar/" target="_blank">
-                        <img alt="Argentina.gob.ar - Presidencia de la Nación" src="/img/argentinagob.png">
+                        <img alt="Argentina.gob.ar - Presidencia de la Nación" src="/img/argentinagob.png" />
                     </a>
                 </div>
             </div>
@@ -3674,7 +3925,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">
                         <i class="fa fa-cart-plus text-primary"></i>
@@ -3713,7 +3964,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">
                         <i class="fa fa-trash text-danger" aria-hidden="true"></i> &nbsp;
@@ -3722,13 +3973,13 @@
                 </div>
                 <div class="modal-body dimmable loader">
                     <p>
-                        Esta acción borrará todos los productos agregados. <br>
-                        Si estás seguro presioná el botón "VACIAR MI LISTA" y si no cerrá la ventana para cancelar. <br>
+                        Esta acción borrará todos los productos agregados. <br />
+                        Si estás seguro presioná el botón "VACIAR MI LISTA" y si no cerrá la ventana para cancelar. <br />
                         Antes de vaciar la lista podés guardar una copia enviándotela por correo electrónico.
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="emptyList" class="btn btn-danger" data-dismiss="modal" ng-click="vaciarLista() &amp;&amp; comparar()">
+                    <button type="button" id="emptyList" class="btn btn-danger" data-dismiss="modal" ng-click="vaciarLista() && comparar()">
                         <i class="fa fa-trash" aria-hidden="true"></i>
                         &nbsp;Vaciar mi lista
                     </button>
@@ -3746,7 +3997,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">
                         <i class="fa fa-paper-plane text-primary"></i>
@@ -3760,10 +4011,10 @@
                     <form action="">
                         <div class="form-group">
                             <input type="email" class="form-control" id="send-list-email" placeholder="Ingresar dirección de correo electrónico">
-                            <input type="hidden" value="{{ lista | porCorreo }}" id="send-list-data">
-                            <input type="hidden" value="{{ preciosEnComparativa | json}}" id="send-prices-data">
-                            <input type="hidden" value="{{ sucursalesSeleccionadas | json}}" id="send-subsidiaries-data">
-                            <input type="hidden" value="{{ lista | json}}" id="send-products-data">
+                            <input type="hidden" value="{{ lista | porCorreo }}" id="send-list-data" />
+                            <input type="hidden" value="{{ preciosEnComparativa | json}}" id="send-prices-data" />
+                            <input type="hidden" value="{{ sucursalesSeleccionadas | json}}" id="send-subsidiaries-data" />
+                            <input type="hidden" value="{{ lista | json}}" id="send-products-data" />
                             <input type="text" style="display: none;" disabled="disabled" size="1">
                         </div>
                         <div id="send-list-recaptcha"></div>
@@ -3790,7 +4041,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">
                         <i class="fa fa-exclamation-triangle text-primary"></i> &nbsp;
@@ -3882,7 +4133,7 @@
                             </form>
                             <div class="modal-footer">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <button type="button" class="col-md-12 btn btn-primary center-block" onclick="submit_make_suggestion();">
+                                    <button type="button" class="col-md-12 btn btn-primary center-block" onclick="submit_make_suggestion(false);">
                                         <i class="fa fa-exclamation-triangle"></i>
                                         &nbsp;Enviar sugerencias
                                     </button>
@@ -3998,7 +4249,7 @@
     </div>
 
     <div class="alert alert-info contenedor-mensajes hidden" role="alert">
-        <button type="button" class="cerrar-msj close"><span aria-hidden="true">×</span></button>
+        <button type="button" class="cerrar-msj close"><span aria-hidden="true">&times;</span></button>
         <span class="mensaje"></span>
     </div><!-- Modal Comercio-->
     <div id="modalComercio" class="modal fade" tabindex="-1" role="dialog">
@@ -4006,7 +4257,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">
                         <i class="fa fa-cart-plus text-primary"></i>
@@ -4045,7 +4296,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">
                         <i class="fa fa-trash text-danger" aria-hidden="true"></i> &nbsp;
@@ -4054,13 +4305,13 @@
                 </div>
                 <div class="modal-body dimmable loader">
                     <p>
-                        Esta acción borrará todos los productos agregados. <br>
-                        Si estás seguro presioná el botón "VACIAR MI LISTA" y si no cerrá la ventana para cancelar. <br>
+                        Esta acción borrará todos los productos agregados. <br />
+                        Si estás seguro presioná el botón "VACIAR MI LISTA" y si no cerrá la ventana para cancelar. <br />
                         Antes de vaciar la lista podés guardar una copia enviándotela por correo electrónico.
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="emptyList" class="btn btn-danger" data-dismiss="modal" ng-click="vaciarLista() &amp;&amp; comparar()">
+                    <button type="button" id="emptyList" class="btn btn-danger" data-dismiss="modal" ng-click="vaciarLista() && comparar()">
                         <i class="fa fa-trash" aria-hidden="true"></i>
                         &nbsp;Vaciar mi lista
                     </button>
@@ -4078,7 +4329,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">
                         <i class="fa fa-paper-plane text-primary"></i>
@@ -4092,10 +4343,10 @@
                     <form action="">
                         <div class="form-group">
                             <input type="email" class="form-control" id="send-list-email" placeholder="Ingresar dirección de correo electrónico">
-                            <input type="hidden" value="{{ lista | porCorreo }}" id="send-list-data">
-                            <input type="hidden" value="{{ preciosEnComparativa | json}}" id="send-prices-data">
-                            <input type="hidden" value="{{ sucursalesSeleccionadas | json}}" id="send-subsidiaries-data">
-                            <input type="hidden" value="{{ productosEnComparativa | json}}" id="send-products-data">
+                            <input type="hidden" value="{{ lista | porCorreo }}" id="send-list-data" />
+                            <input type="hidden" value="{{ preciosEnComparativa | json}}" id="send-prices-data" />
+                            <input type="hidden" value="{{ sucursalesSeleccionadas | json}}" id="send-subsidiaries-data" />
+                            <input type="hidden" value="{{ productosEnComparativa | json}}" id="send-products-data" />
                             <input type="text" style="display: none;" disabled="disabled" size="1">
                         </div>
                         <div id="send-list-recaptcha"></div>
@@ -4122,7 +4373,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title">
                         <i class="fa fa-exclamation-triangle text-primary"></i> &nbsp;
@@ -4214,7 +4465,7 @@
                             </form>
                             <div class="modal-footer">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <button type="button" class="col-md-12 btn btn-primary center-block" onclick="submit_make_suggestion();">
+                                    <button type="button" class="col-md-12 btn btn-primary center-block" onclick="submit_make_suggestion(false);">
                                         <i class="fa fa-exclamation-triangle"></i>
                                         &nbsp;Enviar sugerencias
                                     </button>
@@ -4330,9 +4581,10 @@
     </div>
 
     <div class="alert alert-info contenedor-mensajes hidden" role="alert">
-        <button type="button" class="cerrar-msj close"><span aria-hidden="true">×</span></button>
+        <button type="button" class="cerrar-msj close"><span aria-hidden="true">&times;</span></button>
         <span class="mensaje"></span>
     </div>
+
 
     <div id="modalGmaps" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
@@ -4341,7 +4593,7 @@
 
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                     <h5 class="modal-title">
                         Ingresá tu ubicación
@@ -4351,7 +4603,7 @@
                 <!-- Utilizar cuando se implemente el nuevo manejo de errores -->
 
                 <div id="oops" class="alert alert-danger text-left mess no-display">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     <i class="fa fa-exclamation-triangle"></i>
                     <p>¡Ooops, parece que algo ha ocurrido!</p>
                     <span id="showOops"></span>
@@ -4370,7 +4622,7 @@
                     <div class="direccion">
                         <div id="geo" class="col-sm-6 col-md-8">
                             <label for="address">Dirección</label>
-                            <input id="address" type="textbox" class="form-control" placeholder="Ingresa tu dirección">
+                            <input id="address" type="textbox" class="form-control" placeholder="Ingresa tu direcci&oacute;n" />
                         </div>
                         <a href="javascript:;" id="linkToHTML5Geo" class="btn btn-primary col-sm-6 col-md-4 ubicacion">
                             &nbsp; Usar la ubicación de mi navegador
@@ -4394,11 +4646,11 @@
         </div>
     </div>
 
-    <script defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4LRPCDgzVyOj12TO5kRiaGGs-Tmn0BxY&amp;libraries=places&amp;language=es"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4LRPCDgzVyOj12TO5kRiaGGs-Tmn0BxY&libraries=places&language=es"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <script src="//google.com/recaptcha/api.js?hl=es-419"></script>
+    <script src='//google.com/recaptcha/api.js?hl=es-419'></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
@@ -4409,7 +4661,7 @@
     <script src="/js/slick.js"></script>
     <script src="/js/angular-slick.js"></script>
 
-    <script src="/js/app/application.0ba5bce61c12f3cbaab2c5a1c2664ac2.js"></script>
+    <script src='/js/app/application.7df3d51267e99f8f20c2dc5a36147a9d.js'></script>
     <script>
         var API_URL = "https://d735s5r2zljbo.cloudfront.net/prod";
         var NEW_API_URL = "https://d3e6htiiul5ek9.cloudfront.net/prod";
@@ -4419,9 +4671,8 @@
         var CDN_URL = "https://imagenes.preciosclaros.gob.ar";
         var API_KEY = "zIgFou7Gta7g87VFGL9dZ4BEEs19gNYS1SOQZt96";
         var CLOUDSEARCH_URL = "https://6big2mgch7.execute-api.us-east-1.amazonaws.com/prod/suggest_minoristas";
+        var URL = "https://www.preciosclaros.gob.ar/";
     </script>
-
-
 
 
 </body>
